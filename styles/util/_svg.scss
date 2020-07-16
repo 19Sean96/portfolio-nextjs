@@ -1,0 +1,21 @@
+.logo {
+    box-shadow: 0 0 5rem 0 rgba(0,0,0,.2);
+
+    &--line {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+        fill: none;
+    }
+
+    &--firstname {
+        fill: #fff;
+    }
+
+    &--firstname, &--lastname {
+        font-size: 77px;
+        font-family: Urbane-Medium, Urbane;
+        font-weight: 500;
+        letter-spacing: -0.05em;
+    }
+}
