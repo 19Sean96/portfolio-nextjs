@@ -1,5 +1,6 @@
 import Landing from "../components/sections/Home/Landing";
 import About from "../components/sections/Home/About"
+import Skills from "../components/sections/Home/Skills"
 export default function Home(props) {
 
   return (
@@ -8,6 +9,7 @@ export default function Home(props) {
     >
       <Landing />
       <About />
+      <Skills />
     </div>
   );
 }

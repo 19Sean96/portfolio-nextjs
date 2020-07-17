@@ -1,8 +1,10 @@
+@import "./util/variables";
 @import "./util/svg";
 @import "./util/cursor";
 @import "./sections/landing";
-
-
+@import "./sections/nav";
+@import "./sections/about";
+@import "./sections/skills";
 
 @import url("https://use.typekit.net/jbp2qlq.css");
 
@@ -21,9 +23,21 @@ body {
   cursor: none;
 }
 
+.app {
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: $cream;
+}
+
 .container {
     position: relative;
     width: 100vw;
+}
+
+.page {
+    width: 100vw;
+    min-height: 100vh;
 }
 
 .logo {
@@ -33,4 +47,18 @@ body {
     top: 1.5rem;
     left: 1.5rem;
     z-index: 100;
+}
+
+.menu--toggle {
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    transform: translate(0,-50%);
+
+
+    a {
+        color: #111;
+        font-size: 3.66rem;
+        text-transform: uppercase;
+    }
 }

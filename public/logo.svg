@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.75 95.09">
+  <defs>
+    <style>
+      .cls-1,
+      .cls-4 {
+        fill: none;
+      }
+      .cls-1 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+      }
+      .cls-2,
+      .cls-3 {
+        font-size: 77px;
+        font-family: Urbane-Medium, Urbane;
+        font-weight: 500;
+        letter-spacing: -0.05em;
+      }
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <line class="cls-1" x1="641.14" y1="24.95" x2="641.14" y2="80.18" />
+      <polyline
+        class="cls-1"
+        points="641.14 78.47 641.14 91.59 3.88 91.59 3.88 3.5 641.14 3.5 641.14 11.84"
+      />
+      <rect x="3.56" y="4.77" width="234.06" height="77.93" />
+      <text class="cls-2" transform="translate(21.08 71.33)">SEAN</text>
+      <text class="cls-3" transform="translate(259.93 71.33)">ANTHONY</text>
+      <rect class="cls-4" y="82.7" width="7.44" height="5.37" />
+    </g>
+  </g>
+</svg>

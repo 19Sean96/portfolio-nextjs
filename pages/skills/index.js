@@ -1,7 +1,6 @@
-export default function Skills() {
-    return (
-        <div>
-            Skills
-        </div>
-    )
+import Skills from '../../components/sections/Home/Skills'
+
+
+export default function SkillsPage() {
+    return <Skills />
 }
