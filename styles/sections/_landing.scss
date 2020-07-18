@@ -5,6 +5,17 @@
   align-items: center;
   height: 86vh;
 
+  .echo {
+    position: absolute;
+    z-index: 1;
+    top: 0; left: 0;
+    transform: translate(-7.5%, -10%);
+    font-size: 27vmax;
+    text-transform: uppercase;
+    color: #ede5e6;
+  }
+
+
   &--center-stage {
     position: relative;
     z-index: 2000;
@@ -13,12 +24,14 @@
       font-family: temeraire, serif;
       font-weight: 900;
       font-style: normal;
-      font-size: 5.5rem;
+      font-size: 7.5rem;
       margin-bottom: 2rem;
     }
 
+
+
     h2 {
-      font-size: 3.1rem;
+      font-size: 4.1rem;
     }
 
     .big-box {
@@ -26,7 +39,7 @@
       z-index: 50;
       box-shadow: 0 0.83rem 2rem 0 rgba(0, 0, 0, 0.2);
       background-color: $cream;
-      padding: 3rem 7.7rem 2.75rem;
+      padding: 3rem 7.7rem 3.25rem;
     }
     .small-box {
       background-color: $cream;

@@ -5,42 +5,53 @@ export default function About() {
         <h3 className="about--title">about.</h3>
         <div className="about--paragraph__wrapper">
           <article className="about--paragraph about--paragraph-1">
-            <h4 className="about--paragraph--title">Beginning</h4>
+            <h4 className="about--paragraph--title">Process</h4>
             <p class="about--paragraph--text">
-              Art has always been a passion of mine that i used to pass the time
-              & distract me from real work. i became really interested in
-              painting and used that to exercise my creativity, although I never
-              imagined that i could make a profession from it.
+              Understanding & visualizing what is important - this is the first
+              step that both Design & Development fundamentally share. With
+              endless opportunity for creating experiences on the web, a
+              targeted vision is needed to avoid wasting time and focus on the
+              most impactful factors to the application end-goal.
             </p>
             <p class="about--paragraph--text">
-              I’ve been using computers as early as 3 years old when I would
-              play educational games. I owned my own computer at the age of 6.
-              however, it wouldn’t be until high school when i would experiment
-              with graphic design & html/css.
+              To me, being able to visualize an application architecture and
+              understand its impact on future development is indistinguishable
+              to visualizing a design language for a web-app or website and
+              understand how the user experience will be impacted.
             </p>
           </article>
           <article className="about--paragraph about--paragraph-2">
-            <h4 className="about--paragraph--title">Vision</h4>
+            <h4 className="about--paragraph--title">Purpose</h4>
             <p className="about--paragraph--text">
-              until 2014 when i moved to phoenix, i didn’t have too much
-              direction. it was around this time I discovered that web
-              development was a serious industry which happened to combine my
-              two favorite subjects: art & tech.
+              With proven capabilities in mathematics & creative design, I see
+              myself as being ambidextrous to both creative & technical work.
+              Neutral to either department, I enjoy acting as the translator
+              between technical & creative teams.
             </p>
             <p className="about--paragraph--text">
-              fast forward to 2019, and here we are. I am very passionate about
-              creating beautiful web experiences, and I sincerely look forward
-              to discussing future collaborations.
+              Communication is essential to success in any industry, and it’s a
+              hard, dynamic skill to master, yet one that returns dividends. It
+              impacts business operations, marketing, development timeframes,
+              and so much more. My role is to be that impact through
+              transparency, cooperation & understanding audiences.
             </p>
           </article>
           <article className="about--paragraph about--paragraph-3">
-            <h4 className="about--paragraph--title">Inspiration</h4>
+            <h4 className="about--paragraph--title">Passion</h4>
             <p className="about--paragraph--text">
-              my creativity is heavily inspired by artists such as Jean-michel
-              basquiat, andy warhol & picasso. I have an appreciation for
-              minimalist design & abstract art. I’m excited to see how the web
-              will evolve over the next decade & i am determined to be a part of
-              that growth.
+              Original ideas are nothing more than a “mixing” of pre-existing
+              ideas to create something brand new - an innovation. Meaning, an
+              original idea is only as good as the existing ideas the thinker
+              was already exposed to.
+            </p>
+            <p className="about--paragraph--text">
+              I’m passionate about diversifying the ideas I’m exposed to.
+              Whether that be peaking through history, sharing a conversation of
+              ideals with someone from a different country, or simply watching
+              nature documentaries, everything leaves an impact on how I
+              approach life and work. I love digesting what I observe & finding
+              analogies that seem to make more sense when combined with
+              otherwise unrelated topics.
             </p>
           </article>
         </div>

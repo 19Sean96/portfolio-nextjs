@@ -5,65 +5,57 @@ export default function Skills() {
         <h3 className="skills--title">skills.</h3>
         <div className="skills--list__wrapper">
           <article className="skills--list skills--list-1">
-            <h4 className="skills--list--title">front-end</h4>
+            <h4 className="skills--list--title">development</h4>
             <ul>
               <li className="skills--list--item">
-                <span className="skills--list--item__name">html</span>
-                <span className="skills--list--item__details">accessability, seo, handlebars</span>
+                <span className="skills--list--item__name">React:</span>
+                <span className="skills--list--item__details">Next.js, CRA</span>
               </li>
               <li className="skills--list--item">
-                <span className="skills--list--item__name">css</span>
-                <span className="skills--list--item__details">scss, animations, grid/flexbox</span>
+                <span className="skills--list--item__name">Database Languages: </span>
+                <span className="skills--list--item__details">SQL, MongoDB</span>
               </li>
               <li className="skills--list--item">
-                <span className="skills--list--item__name">javascript</span>
-                <span className="skills--list--item__details">jQuery, es6+, api management, ajax</span>
+                <span className="skills--list--item__name">Headless-CMS: </span>
+                <span className="skills--list--item__details">Directus, Strapi, Shopify</span>
               </li>
               <li className="skills--list--item">
-                <span className="skills--list--item__name">frameworks/libraries</span>
-                <span className="skills--list--item__details">bootstrap, materialize</span>
+                <span className="skills--list--item__name">Server-Side: </span>
+                <span className="skills--list--item__details">Node.js, Express.js</span>
+              </li>
+              <li className="skills--list--item">
+                <span className="skills--list--item__name">SCSS: </span>
+                <span className="skills--list--item__details">Animations (Keyframes & Transitions), Mixins, Variables</span>
               </li>
             </ul>
           </article>
           <article className="skills--list skills--list-2">
-            <h4 className="skills--list--title">UI design</h4>
+            <h4 className="skills--list--title">software</h4>
             <ul>
               <li className="skills--list--item">
-                <span className="skills--list--item__name">html</span>
-                <span className="skills--list--item__details">accessability, seo, handlebars</span>
+                <span className="skills--list--item__name">Creative Cloud: </span>
+                <span className="skills--list--item__details">XD, Photoshop, Illustrator, After Effects</span>
               </li>
               <li className="skills--list--item">
-                <span className="skills--list--item__name">css</span>
-                <span className="skills--list--item__details">scss, animations, grid/flexbox</span>
-              </li>
-              <li className="skills--list--item">
-                <span className="skills--list--item__name">javascript</span>
-                <span className="skills--list--item__details">jQuery, es6+, api management, ajax</span>
-              </li>
-              <li className="skills--list--item">
-                <span className="skills--list--item__name">frameworks/libraries</span>
-                <span className="skills--list--item__details">bootstrap, materialize</span>
+                <span className="skills--list--item__name">Development: </span>
+                <span className="skills--list--item__details">Postman, Visual Studio, Git</span>
               </li>
             </ul>
           </article>
           <article className="skills--list skills--list-3">
-            <h4 className="skills--list--title">back-end</h4>
-            <ul>
+            <h4 className="skills--list--title">Techniques (DevOps)</h4>
+            <ul> 
               <li className="skills--list--item">
-                <span className="skills--list--item__name">html</span>
-                <span className="skills--list--item__details">accessability, seo, handlebars</span>
+                <span className="skills--list--item__name">Hosting</span>
+                <span className="skills--list--item__details">Ubuntu 18.04, Digital Ocean, AWS (EC2)</span>
               </li>
               <li className="skills--list--item">
-                <span className="skills--list--item__name">css</span>
-                <span className="skills--list--item__details">scss, animations, grid/flexbox</span>
+                <span className="skills--list--item__name">Communication Protocols</span>
+                <span className="skills--list--item__details">SSH, SMTP, FTP, HTTPS, HTTP</span>
               </li>
               <li className="skills--list--item">
-                <span className="skills--list--item__name">javascript</span>
-                <span className="skills--list--item__details">jQuery, es6+, api management, ajax</span>
-              </li>
-              <li className="skills--list--item">
-                <span className="skills--list--item__name">frameworks/libraries</span>
-                <span className="skills--list--item__details">bootstrap, materialize</span>
+                <span className="skills--list--item__name">Server Management</span>
+                <span className="skills--list--item__details">SSL certification, process management (pm2), load balancing</span>
               </li>
             </ul>
           </article>

@@ -21,6 +21,7 @@ const handleMouseOut = (e) => {
 export default function Landing(props) {
   return (
     <section className="landing">
+      <h3 className="echo">Holla!</h3>
       <div className="landing--center-stage">
         <div className="big-box">
           <h1>Hey.</h1>

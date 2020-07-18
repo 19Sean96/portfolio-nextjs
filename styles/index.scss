@@ -28,6 +28,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     background-color: $cream;
+    padding-top: 5vh;
 }
 
 .container {
@@ -43,10 +44,10 @@ body {
 .logo {
     width: 20vw;
     max-width: 25rem;
-    position: absolute;
+    position: fixed;
     top: 1.5rem;
     left: 1.5rem;
-    z-index: 100;
+    z-index: 10000;
 }
 
 .menu--toggle {

@@ -6,10 +6,12 @@ const handleMouseIn = (e) => {
   cursor.style.backgroundColor = "rgb(255,255,255)";
 
   const cursorInner = cursor.querySelector(".cursor--inner");
-  cursorInner.style.borderColor = "rgb(255,255,255)";
+  cursorInner.style.transform = "translate(-50%,-50%) scale(10)";
+  cursorInner.style.backgroundColor = "#7bd";
+  cursorInner.style.borderColor = "#7bd";
 
   const cursor2 = document.querySelector(".cursor-2");
-  cursor2.style.backgroundColor = "rgb(66,66,230)";
+  cursor2.style.backgroundColor = "#ffe";
 };
 
 const handleMouseOut = (e) => {
@@ -17,10 +19,12 @@ const handleMouseOut = (e) => {
   cursor.style.backgroundColor = "#111";
 
   const cursorInner = cursor.querySelector(".cursor--inner");
+  cursorInner.style.transform = "translate(-50%,-50%) scale(.2)";
+  cursorInner.style.backgroundColor = "rgba(255,255,255,0)";
   cursorInner.style.borderColor = "#111";
 
   const cursor2 = document.querySelector(".cursor-2");
-  cursor2.style.backgroundColor = "rgba(66,66,230,0)";
+  cursor2.style.backgroundColor = "#111";
 };
 
 export default function MainLayout({ children }) {
