@@ -1,5 +1,6 @@
 import Link from "next/link";
-
+import { useInView } from 'react-intersection-observer'
+import styled from 'styled-components'
 const handleMouseIn = (e) => {
   const cursor = document.querySelector(".cursor");
   cursor.style.backgroundColor = "rgb(41, 170, 18)";
@@ -18,9 +19,17 @@ const handleMouseOut = (e) => {
   cursorInner.style.borderColor = "#111";
 };
 
+const StyledSection = styled.section`
+  opacity: ${props => props.inView ? 1 : 0};
+  transition: .75s opacity ease-in-out;
+`
+
 export default function Landing(props) {
+  const [ref, inView, entry] = useInView({
+    threshold: .43
+  })
   return (
-    <section className="landing">
+    <StyledSection className="landing" ref={ref} inView={inView}>
       <h3 className="echo">Holla!</h3>
       <div className="landing--center-stage">
         <div className="big-box">
@@ -39,6 +48,6 @@ export default function Landing(props) {
           </div>
         </Link>
       </div>
-    </section>
+    </StyledSection>
   );
 }

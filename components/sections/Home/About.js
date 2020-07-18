@@ -1,6 +1,19 @@
+import { useInView } from 'react-intersection-observer'
+import styled from 'styled-components'
+
+const StyledSection = styled.section`
+  opacity: ${props => props.inView ? 1 : 0};
+  transition: .75s opacity ease-in-out;
+`
+
 export default function About() {
+
+  const [ref, inView, entry] = useInView({
+    threshold: .43
+  })
+
   return (
-    <section className="about page">
+    <StyledSection className="about page" inView={inView} ref={ref}>
       <div className="about__wrapper">
         <h3 className="about--title">about.</h3>
         <div className="about--paragraph__wrapper">
@@ -56,6 +69,6 @@ export default function About() {
           </article>
         </div>
       </div>
-    </section>
+    </StyledSection>
   );
 }

@@ -6,7 +6,7 @@ const handleMouseIn = (e) => {
   cursor.style.backgroundColor = "rgb(255,255,255)";
 
   const cursorInner = cursor.querySelector(".cursor--inner");
-  cursorInner.style.transform = "translate(-50%,-50%) scale(10)";
+  cursorInner.style.transform = "translate(-50%,-50%) scale(15)";
   cursorInner.style.backgroundColor = "#7bd";
   cursorInner.style.borderColor = "#7bd";
 
