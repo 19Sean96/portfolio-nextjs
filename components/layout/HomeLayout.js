@@ -1,6 +1,9 @@
+import { useEffect } from 'react'
 import Head from "next/head";
 import Logo from "../svg/Logo";
 import Link from "next/link";
+import { useRouter } from 'next/router'
+
 const handleMouseIn = (e) => {
   const cursor = document.querySelector(".cursor");
   cursor.style.backgroundColor = "rgb(255,255,255)";
@@ -27,7 +30,14 @@ const handleMouseOut = (e) => {
   cursor2.style.backgroundColor = "#111";
 };
 
-export default function MainLayout({ children }) {
+export default function MainLayout({ children, href }) {
+  const router = useRouter()
+
+  useEffect(() => {
+    console.log(router)
+    console.log(router.pathname)
+  })
+  
   return (
     <div className="container">
       <Head>

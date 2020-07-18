@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { useInView } from 'react-intersection-observer'
-import styled from 'styled-components'
+import { useInView } from "react-intersection-observer";
+import styled from "styled-components";
 const handleMouseIn = (e) => {
   const cursor = document.querySelector(".cursor");
   cursor.style.backgroundColor = "rgb(41, 170, 18)";
@@ -20,14 +20,37 @@ const handleMouseOut = (e) => {
 };
 
 const StyledSection = styled.section`
-  opacity: ${props => props.inView ? 1 : 0};
-  transition: .75s opacity ease-in-out;
-`
+  opacity: ${(props) => (props.inView ? 1 : 0)};
+  transition: 0.25s opacity .15s linear;
+
+  .landing--center-stage {
+    transform: translateX(${(props) => (props.inView ? "0%" : "-25%")});
+    transition: 0.35s transform ease-out;
+
+    h1 {
+      opacity: ${(props) => (props.inView ? 1 : 0)};
+      transition: 0.35s opacity .225s ease-in;
+    }
+
+    h2 {
+      opacity: ${(props) => (props.inView ? 1 : 0)};
+      transition: 0.35s opacity .3s ease-out;
+    }
+
+    .small-box {
+      transform: translateY(${props => props.inView ? "0" : "-50%"});
+
+      &:hover {
+        transform: translateY(25%);
+      }
+    }
+  }
+`;
 
 export default function Landing(props) {
   const [ref, inView, entry] = useInView({
-    threshold: .43
-  })
+    threshold: 0.43,
+  });
   return (
     <StyledSection className="landing" ref={ref} inView={inView}>
       <h3 className="echo">Holla!</h3>

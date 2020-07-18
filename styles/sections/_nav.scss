@@ -5,6 +5,7 @@
     align-items: center;
 
     &--box {
+        position: relative;
         background-color: $cream;
         display: flex;
         flex-direction: column;

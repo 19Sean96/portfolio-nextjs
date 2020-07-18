@@ -1,4 +1,6 @@
 import Link from "next/link";
+import styled from "styled-components";
+import { useInView } from "react-intersection-observer";
 
 const handleMouseIn = (e) => {
   const cursor = document.querySelector(".cursor");
@@ -18,9 +20,20 @@ const handleMouseOut = (e) => {
   cursorInner.style.borderColor = "#111";
 };
 
+const StyledNav = styled.nav`
+  .nav--box {
+    opacity: ${(props) => (props.inView ? 1 : 0)};
+    transition: 0.25s opacity ease-in-out;
+  }
+`;
+
 export default function Menu() {
+  const [ref, inView, entry] = useInView({
+    threshold: 0.43,
+  });
+
   return (
-    <nav className="nav">
+    <StyledNav className="nav" inView={inView} ref={ref}>
       <div className="nav--box">
         <Link as="/about" href="/about">
           <a
@@ -63,6 +76,6 @@ export default function Menu() {
           </a>
         </Link>
       </div>
-    </nav>
+    </StyledNav>
   );
 }

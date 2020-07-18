@@ -5,6 +5,12 @@ const StyledSection = styled.section`
   opacity: ${props => props.inView ? 1 : 0};
   transition: .75s opacity ease-in-out;
 `
+const StyledArticle = styled.article`
+opacity: ${props => props.inView ? 1 : 0};
+transform: translate${props => props.inView ? "(0,0)" : props.translate};
+transition: .25s opacity ${props => props.delay}s ease-in-out,
+            .5s transform ${props => props.delay}s ease-out;
+`
 
 export default function About() {
 
@@ -17,7 +23,7 @@ export default function About() {
       <div className="about__wrapper">
         <h3 className="about--title">about.</h3>
         <div className="about--paragraph__wrapper">
-          <article className="about--paragraph about--paragraph-1">
+          <StyledArticle inView={inView} delay={.1} translate={"(0,-25%)"} className="about--paragraph about--paragraph-1">
             <h4 className="about--paragraph--title">Process</h4>
             <p class="about--paragraph--text">
               Understanding & visualizing what is important - this is the first
@@ -32,8 +38,8 @@ export default function About() {
               to visualizing a design language for a web-app or website and
               understand how the user experience will be impacted.
             </p>
-          </article>
-          <article className="about--paragraph about--paragraph-2">
+          </StyledArticle>
+          <StyledArticle inView={inView} delay={.2} translate={"(-25%,0)"} className="about--paragraph about--paragraph-2">
             <h4 className="about--paragraph--title">Purpose</h4>
             <p className="about--paragraph--text">
               With proven capabilities in mathematics & creative design, I see
@@ -48,8 +54,8 @@ export default function About() {
               and so much more. My role is to be that impact through
               transparency, cooperation & understanding audiences.
             </p>
-          </article>
-          <article className="about--paragraph about--paragraph-3">
+          </StyledArticle>
+          <StyledArticle inView={inView} delay={.3} translate={"(25%,0)"} className="about--paragraph about--paragraph-3">
             <h4 className="about--paragraph--title">Passion</h4>
             <p className="about--paragraph--text">
               Original ideas are nothing more than a “mixing” of pre-existing
@@ -66,7 +72,7 @@ export default function About() {
               analogies that seem to make more sense when combined with
               otherwise unrelated topics.
             </p>
-          </article>
+          </StyledArticle>
         </div>
       </div>
     </StyledSection>
