@@ -1,0 +1,6 @@
+.projects {
+
+    &--title {
+        @include pageTitle(0,0);
+    }
+}

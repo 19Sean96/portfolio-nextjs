@@ -1,8 +1,5 @@
 .landing {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 50vh !important;
   height: 86vh;
 
   .echo {

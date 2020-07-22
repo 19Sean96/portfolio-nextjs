@@ -1,1 +1,49 @@
 $cream: #f5eff3;
+
+@mixin pageWrapper() {
+    position: relative;
+    background-color: $cream;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 2000;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    box-shadow: 0 0.83rem 1.3rem 0 rgba(0, 0, 0, 0.1);
+
+}
+
+@mixin pageTitle($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  color: #333;
+  font-size: 17.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+}
+
+@mixin pageBody() {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &--title {
+    font-size: 3.45rem;
+    padding-bottom: 3rem;
+    font-family: temeraire, serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+}

@@ -5,6 +5,7 @@
 @import "./sections/nav";
 @import "./sections/about";
 @import "./sections/skills";
+@import "./sections/projects";
 
 @import url("https://use.typekit.net/jbp2qlq.css");
 
@@ -40,6 +41,9 @@ body {
     position: relative;
     width: 100vw;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
