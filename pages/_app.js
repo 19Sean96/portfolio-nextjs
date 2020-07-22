@@ -1,9 +1,9 @@
 import React, { createRef } from "react";
 import App from "next/app";
 
-import HomeLayout from "../components/layout/HomeLayout";
+import HomeLayout from "../components/HomeLayout";
 
-import styles from "../styles/index.scss";
+import "../styles/index.scss";
 
 class MyApp extends App {
   constructor(props) {
@@ -76,7 +76,6 @@ class MyApp extends App {
   };
   render() {
     // we retrieve coordinates from state
-    const { mouseX, mouseY, trailingX, trailingY } = this.state;
     const { Component, pageProps, router } = this.props;
     return (
       <div onMouseMove={(e) => this.handleMouseMove(e)} className="app">
