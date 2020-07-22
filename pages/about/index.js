@@ -1,11 +1,21 @@
 import { useInView } from 'react-intersection-observer'
 import { StyledArticle, StyledSection } from '../../components/About.styled'
+import { useEffect } from "react";
+import { useRouter } from 'next/router'
 
 export default function AboutPage() {
-
   const [ref, inView, entry] = useInView({
-    threshold: .43
+    threshold: .375
   })
+
+  const router = useRouter()
+
+  useEffect(() => {
+    console.log(inView)
+    if (inView) router.push('/', '/about', { shallow: true })
+    else if (!inView && router.asPath !== "/about") router.push("/", router.asPath, { shallow: true})
+    else router.push('/', undefined, { shallow: true })
+  }, [inView])
 
   return (
     <StyledSection className="about page" inView={inView} ref={ref}>

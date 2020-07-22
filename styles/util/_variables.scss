@@ -9,13 +9,13 @@ $cream: #f5eff3;
     align-items: center;
 
     z-index: 2000;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
     box-shadow: 0 0.83rem 1.3rem 0 rgba(0, 0, 0, 0.1);
 
 }
 
-@mixin pageTitle($top, $left) {
+@mixin pageTitle($top, $left, $mode: difference) {
   position: absolute;
   top: $top;
   left: $left;
@@ -23,7 +23,7 @@ $cream: #f5eff3;
   font-size: 17.5rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
-  mix-blend-mode: difference;
+  mix-blend-mode: $mode;
 }
 
 @mixin pageBody() {

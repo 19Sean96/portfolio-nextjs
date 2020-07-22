@@ -46,9 +46,9 @@ export default function MainLayout({ children }) {
         onMouseOver={handleMouseIn}
         onMouseOut={handleMouseOut}
       >
-        <Link as="/menu" href="/menu">
+        {/* <Link as="/menu" href="/menu">
           <a>menu</a>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
