@@ -1,7 +1,16 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import StyledProject from './Project.styled'
+import StyledProject from "./Project.styled";
 import { useInView } from "react-intersection-observer";
+
+const Image = (props) => (
+  <img
+    src="/campaign-builder.jpg"
+    alt="Campaign Builder"
+    className="project--img"
+  />
+);
+
 export default function Project(props) {
   const { project } = props;
   const [ref, inView, entry] = useInView({
@@ -32,6 +41,9 @@ export default function Project(props) {
           docs
         </a>
       </nav>
+      <article className="project--img__wrapper">
+        <Image />
+      </article>
       <article className="project--description">
         <h3 className="project--description__title">Description</h3>
         <p className="project--description__par">{project.description}</p>

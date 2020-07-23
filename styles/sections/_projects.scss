@@ -144,4 +144,16 @@
         text-transform: uppercase;
     }
   }
+
+  &--img {
+    position: relative;
+    transform: translateX(-15%);
+    box-shadow: 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    &__wrapper {
+        grid-column: 1/5;
+        grid-row: 2/5;
+        position: relative;
+    }
+  }
 }
