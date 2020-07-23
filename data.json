@@ -1,110 +1,86 @@
 [
-    {
-        "title": "Campaign Builder",
-        "subtitle": "e-Commerce Marketing Template",
-        "technologyUsed": [
-            "React",
-            "Directus Headless-CMS",
-            "PM2 (process manager)",
-            "Node/Express.js"
-        ],
-        "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
-        "siteLink": "https://campaign.sportexsafety.com/covid",
-        "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
-        "role": [
-            "lead developer",
-            "junior designer"
-        ],
-        "year": "2020"
-    },
-    {
-        "title": "Chaptr",
-        "subtitle": "e-Commerce Marketing Template",
-        "technologyUsed": [
-            "React",
-            "Directus Headless-CMS",
-            "PM2 (process manager)",
-            "Node/Express.js"
-        ],
-        "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
-        "siteLink": "https://campaign.sportexsafety.com/covid",
-        "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
-        "role": [
-            "lead developer",
-            "junior designer"
-        ],
-        "year": "2020"
-    },
-    {
-        "title": "Picki",
-        "subtitle": "e-Commerce Marketing Template",
-        "technologyUsed": [
-            "React",
-            "Directus Headless-CMS",
-            "PM2 (process manager)",
-            "Node/Express.js"
-        ],
-        "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
-        "siteLink": "https://campaign.sportexsafety.com/covid",
-        "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
-        "role": [
-            "lead developer",
-            "junior designer"
-        ],
-        "year": "2020"
-    },
-    {
-        "title": "GIF Search",
-        "subtitle": "e-Commerce Marketing Template",
-        "technologyUsed": [
-            "React",
-            "Directus Headless-CMS",
-            "PM2 (process manager)",
-            "Node/Express.js"
-        ],
-        "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
-        "siteLink": "https://campaign.sportexsafety.com/covid",
-        "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
-        "role": [
-            "lead developer",
-            "junior designer"
-        ],
-        "year": "2020"
-    },
-    {
-        "title": "Reactive Shapes",
-        "subtitle": "e-Commerce Marketing Template",
-        "technologyUsed": [
-            "React",
-            "Directus Headless-CMS",
-            "PM2 (process manager)",
-            "Node/Express.js"
-        ],
-        "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
-        "siteLink": "https://campaign.sportexsafety.com/covid",
-        "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
-        "role": [
-            "lead developer",
-            "junior designer"
-        ],
-        "year": "2020"
-    },
-    {
-        "title": "Brown Sales",
-        "subtitle": "e-Commerce Marketing Template",
-        "technologyUsed": [
-            "React",
-            "Directus Headless-CMS",
-            "PM2 (process manager)",
-            "Node/Express.js"
-        ],
-        "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
-        "siteLink": "https://campaign.sportexsafety.com/covid",
-        "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
-        "role": [
-            "lead developer",
-            "junior designer"
-        ],
-        "year": "2020"
-    }
+  {
+    "title": "Campaign Builder",
+    "subtitle": "e-Commerce Marketing Template",
+    "technologyUsed": [
+      ["hosting", "(2x) Ubuntu 18.04 Servers With Pm2"],
+      ["database", "sql with headless CMS (Directus) & Terminal access"],
+      ["application", "react with express.js"]
+    ],
+    "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
+    "siteLink": "https://campaign.sportexsafety.com/covid",
+    "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
+    "role": ["lead developer", "junior designer"],
+    "year": "2020"
+  },
+  {
+    "title": "Chaptr",
+    "subtitle": "e-Commerce Marketing Template",
+    "technologyUsed": [
+      ["hosting", "(2x) Ubuntu 18.04 Servers With Pm2"],
+      ["database", "sql with headless CMS (Directus) & Terminal access"],
+      ["application", "react with express.js"]
+    ],
+    "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
+    "siteLink": "https://campaign.sportexsafety.com/covid",
+    "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
+    "role": ["lead developer", "junior designer"],
+    "year": "2020"
+  },
+  {
+    "title": "Picki",
+    "subtitle": "e-Commerce Marketing Template",
+    "technologyUsed": [
+      ["hosting", "(2x) Ubuntu 18.04 Servers With Pm2"],
+      ["database", "sql with headless CMS (Directus) & Terminal access"],
+      ["application", "react with express.js"]
+    ],
+    "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
+    "siteLink": "https://campaign.sportexsafety.com/covid",
+    "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
+    "role": ["lead developer", "junior designer"],
+    "year": "2020"
+  },
+  {
+    "title": "GIF Search",
+    "subtitle": "e-Commerce Marketing Template",
+    "technologyUsed": [
+      ["hosting", "(2x) Ubuntu 18.04 Servers With Pm2"],
+      ["database", "sql with headless CMS (Directus) & Terminal access"],
+      ["application", "react with express.js"]
+    ],
+    "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
+    "siteLink": "https://campaign.sportexsafety.com/covid",
+    "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
+    "role": ["lead developer", "junior designer"],
+    "year": "2020"
+  },
+  {
+    "title": "Reactive Shapes",
+    "subtitle": "e-Commerce Marketing Template",
+    "technologyUsed": [
+      ["hosting", "(2x) Ubuntu 18.04 Servers With Pm2"],
+      ["database", "sql with headless CMS (Directus) & Terminal access"],
+      ["application", "react with express.js"]
+    ],
+    "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
+    "siteLink": "https://campaign.sportexsafety.com/covid",
+    "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
+    "role": ["lead developer", "junior designer"],
+    "year": "2020"
+  },
+  {
+    "title": "Brown Sales",
+    "subtitle": "e-Commerce Marketing Template",
+    "technologyUsed": [
+      ["hosting", "(2x) Ubuntu 18.04 Servers With Pm2"],
+      ["database", "sql with headless CMS (Directus) & Terminal access"],
+      ["application", "react with express.js"]
+    ],
+    "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
+    "siteLink": "https://campaign.sportexsafety.com/covid",
+    "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
+    "role": ["lead developer", "junior designer"],
+    "year": "2020"
+  }
 ]

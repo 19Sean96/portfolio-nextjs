@@ -57,6 +57,7 @@ body {
 
 .menu--toggle {
     position: fixed;
+    z-index: 4000;
     top: 50%;
     right: 40px;
     transform: translate(0,-50%);
@@ -66,7 +67,7 @@ body {
 
     a {
         color: #111;
-        font-size: 3.15rem;
+        font-size: 2.75rem;
         text-transform: uppercase;
         margin: 2rem 0 2rem;
     }

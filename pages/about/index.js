@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 export default function AboutPage() {
   const [ref, inView, entry] = useInView({
-    threshold: .415
+    threshold: .365
   })
 
   const router = useRouter()

@@ -28,6 +28,7 @@ export default function Projects() {
 
           {data.map(proj => <Project project={proj} />)}
 
+
         </div>
       </div>
     </StyledSection>

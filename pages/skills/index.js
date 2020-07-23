@@ -12,7 +12,6 @@ export default function SkillsPage() {
 
   const router = useRouter()
   useEffect(() => {
-    console.log(router)
     if (inView) router.push('/', '/skills', { shallow: true })
     else if (!inView && router.asPath !== "/skills") router.push("/", router.asPath, { shallow: true})
     else router.push('/', undefined, { shallow: true })
