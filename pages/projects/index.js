@@ -2,9 +2,14 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { StyledSection } from "../../components/About.styled"
+import Project from "../../components/ProjectTemplate"
+
+import data from '../../data.json'
+
+
 export default function Projects() {
   const [ref, inView, entry] = useInView({
-    threshold: 0.375,
+    threshold: .415,
   });
 
   const router = useRouter()
@@ -16,10 +21,14 @@ export default function Projects() {
   }, [inView])
 
   return (
-    <StyledSection className="projects page" inView={inView} ref={ref}>
+    <StyledSection className="projects page" inView={inView} ref={ref} id="projects" name="projects">
       <div className="projects__wrapper">
         <h3 className="projects--title">projects.</h3>
-        <div className="projects--list__wrapper"></div>
+        <div className="projects--list__wrapper">
+
+          {data.map(proj => <Project name={proj.title} />)}
+
+        </div>
       </div>
     </StyledSection>
   );

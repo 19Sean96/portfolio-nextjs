@@ -6,7 +6,7 @@
   &--list {
     @include pageBody;
     text-transform: capitalize;
-
+    position: relative;
     margin: 3rem;
     padding: 2rem;
     box-shadow: 0 0.83rem 2rem 0 rgba(0, 0, 0, 0.2);

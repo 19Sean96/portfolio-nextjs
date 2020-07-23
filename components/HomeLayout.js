@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Logo from "./Logo";
 import Link from "next/link";
-import { useRouter } from 'next/router'
+import { StyledLink } from "./HomeLayout.styled";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const handleMouseIn = (e) => {
   const cursor = document.querySelector(".cursor");
@@ -30,7 +32,37 @@ const handleMouseOut = (e) => {
 };
 
 export default function MainLayout({ children }) {
-  
+  const router = useRouter();
+
+  const [sectionActive, setSectionActive] = useState({
+    about: false,
+    skills: false,
+    projects: false,
+  });
+
+  useEffect(() => {
+    console.log("THIS IS COMING FROM HOME LAYOUT", window);
+    if (router.asPath === "/about") {
+      setSectionActive({
+        about: true,
+        skills: false,
+        projects: false,
+      });
+    } else if (router.asPath === "/skills") {
+      setSectionActive({
+        about: false,
+        skills: true,
+        projects: false,
+      });
+    } else if (router.asPath === "/projects") {
+      setSectionActive({
+        about: false,
+        skills: false,
+        projects: true,
+      });
+    }
+  }, [router.asPath]);
+
   return (
     <div className="container">
       <Head>
@@ -46,9 +78,15 @@ export default function MainLayout({ children }) {
         onMouseOver={handleMouseIn}
         onMouseOut={handleMouseOut}
       >
-        {/* <Link as="/menu" href="/menu">
-          <a>menu</a>
-        </Link> */}
+        <Link href="#about">
+          <StyledLink active={sectionActive.about}>about</StyledLink>
+        </Link>
+        <Link href="#skills">
+          <StyledLink active={sectionActive.skills}>skills</StyledLink>
+        </Link>
+        <Link href="#projects">
+          <StyledLink active={sectionActive.projects}>projects</StyledLink>
+        </Link>
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
 import { useInView } from "react-intersection-observer";
-import StyledSection from '../../components/Skills.styled'
+import { StyledSection } from '../../components/Skills.styled'
 import { useEffect } from "react";
 import { useRouter } from 'next/router'
 
 export default function SkillsPage() {
   const [ref, inView, entry] = useInView({
-    threshold: 0.375,
+    threshold: 0.415,
   });
 
   // SCROLLING DOWN FROM ABOUT TRIGGERS /SKILLS. ONCE /ABOUT GOES OUT OF VIEW, IT RESETS BACK TO /
@@ -18,7 +18,7 @@ export default function SkillsPage() {
     else router.push('/', undefined, { shallow: true })
   }, [inView])
   return (
-    <StyledSection className="skills page" inView={inView} ref={ref}>
+    <StyledSection className="skills page" inView={inView} ref={ref} id="skills" name="skills">
       <div className="skills__wrapper">
         <h3 className="skills--title">skills.</h3>
         <div className="skills--list__wrapper">

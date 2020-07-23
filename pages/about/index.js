@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 export default function AboutPage() {
   const [ref, inView, entry] = useInView({
-    threshold: .375
+    threshold: .415
   })
 
   const router = useRouter()
@@ -18,7 +18,7 @@ export default function AboutPage() {
   }, [inView])
 
   return (
-    <StyledSection className="about page" inView={inView} ref={ref}>
+    <StyledSection className="about page" inView={inView} ref={ref} id="about" name="about">
       <div className="about__wrapper">
         <h3 className="about--title">about.</h3>
         <div className="about--paragraph__wrapper">
