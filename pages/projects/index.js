@@ -9,7 +9,7 @@ import data from '../../data.json'
 
 export default function Projects() {
   const [ref, inView, entry] = useInView({
-    threshold: .415,
+    threshold: .1,
   });
 
   const router = useRouter()
@@ -24,9 +24,9 @@ export default function Projects() {
     <StyledSection className="projects page" inView={inView} ref={ref} id="projects" name="projects">
       <div className="projects__wrapper">
         <h3 className="projects--title">projects.</h3>
-        <div className="projects--list__wrapper">
+        <div className="projects--list">
 
-          {data.map(proj => <Project name={proj.title} />)}
+          {data.map(proj => <Project project={proj} />)}
 
         </div>
       </div>

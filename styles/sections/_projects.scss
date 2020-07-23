@@ -3,4 +3,16 @@
     &--title {
         @include pageTitle(0,0, normal);
     }
+
+    &--list {
+        margin-top: 27.5rem;
+        width: 80vw;
+    }
+}
+
+.project {
+    @include pageWrapper;
+    min-height: 75vh;
+    margin-top: 10rem;
+    padding: 3rem;
 }
