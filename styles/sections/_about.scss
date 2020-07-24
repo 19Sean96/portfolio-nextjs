@@ -28,8 +28,6 @@
 
     &--text {
       text-transform: capitalize;
-      font-size: 2.2rem;
-      padding: 0 1.5rem 3rem;
       line-height: 1.6;
     }
 
@@ -41,11 +39,19 @@
       grid-template-rows: repeat(6,1fr);
       padding: 2rem 0;
     }
+
+    @media screen and (max-width: 1500px) {
+      padding: 3rem 3.5rem 3rem 2.5rem;
+    }
   }
 
   &__wrapper {
     @include pageWrapper;
     
-    padding: 3rem 7.7rem 2.75rem;
+    padding: 3rem 4.75rem 2.75rem;
+
+    @media screen and (max-width: 1500px) {
+      padding: 1.25rem 4.15rem 1rem;
+    }
   }
 }

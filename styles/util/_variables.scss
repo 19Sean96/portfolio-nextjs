@@ -24,6 +24,10 @@ $cream: #f5eff3;
   margin-bottom: 2rem;
   text-transform: uppercase;
   mix-blend-mode: $mode;
+
+  @media screen and (max-width: 1500px) {
+    font-size: 15rem;
+  }
 }
 
 @mixin pageBody() {
@@ -44,6 +48,35 @@ $cream: #f5eff3;
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  &--text,
+  &--item {
+    font-size: 2.2rem;
+    padding: 0 1.5rem 3rem;
+  }
+
+  @media screen and (max-width: 1900px) {
+    &--text,
+    &--item {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 1500px) {
+    &--title {
+      font-size: 3.15rem;
+      padding-bottom: 1.75rem;
+    }
+
+    &--text,
+    &--item {
+      font-size: 1.8rem;
+    }
+
+    &--item {
+      padding: 0 1.5rem 2.1rem;
+    }
   }
 
 }

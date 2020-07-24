@@ -1,5 +1,5 @@
 .landing {
-  min-height: 50vh !important;
+  min-height: 50vw !important;
   height: 86vh;
 
   .echo {
@@ -10,6 +10,11 @@
     font-size: 27vmax;
     text-transform: uppercase;
     color: #ede5e6;
+
+    @media screen and (max-width: 1500px) {
+      transform: translate(-7.5%,-5%);
+
+    }
   }
 
 
@@ -24,8 +29,6 @@
       font-size: 7.5rem;
       margin-bottom: 2rem;
     }
-
-
 
     h2 {
       font-size: 4.1rem;
@@ -54,6 +57,28 @@
 
       &:hover {
         transform: translateY(25%);
+      }
+    }
+
+    @media screen and (max-width: 1500px) {
+      h1 {
+        font-size: 6rem;
+      }
+
+      h2 {
+        font-size: 2.75rem;
+      }
+
+      .big-box {
+        padding: 2.25rem 6.9rem 2.75rem;
+      }
+
+      .small-box {
+        font-size: 1.7rem;
+
+        &:hover {
+          transform: translateY(15%) !important;
+        }
       }
     }
   }
