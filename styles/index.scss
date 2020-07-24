@@ -9,6 +9,9 @@
 
 @import url("https://use.typekit.net/jbp2qlq.css");
 
+html {
+    overflow-x: hidden;
+}
 
 html,
 body {
@@ -44,6 +47,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateX(-5vw);
+
 }
 
 .logo {
@@ -71,4 +76,6 @@ body {
         text-transform: uppercase;
         margin: 2rem 0 2rem;
     }
+
+
 }
