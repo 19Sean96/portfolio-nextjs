@@ -49,6 +49,10 @@ body {
     align-items: center;
     transform: translateX(-5vw);
 
+    @media screen and (max-width: 1050px) {
+        transform: translateX(-10vw);
+    }
+
 }
 
 .logo {
@@ -77,5 +81,12 @@ body {
         margin: 2rem 0 2rem;
     }
 
+    @media screen and (max-width: 1300px) {
+
+        a {
+            font-size: 2.35rem;
+            margin: 1rem 0 1rem;
+        }
+    }
 
 }

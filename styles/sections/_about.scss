@@ -62,7 +62,7 @@
         grid-template-rows: repeat(5, 1fr);
       }
     }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1050px) {
       &-1 {
         grid-row: 1/3;
         grid-column: 1/7;
@@ -80,6 +80,8 @@
 
       &__wrapper {
         grid-template-rows: repeat(6, 1fr);
+        column-gap: 1.05rem;
+        row-gap: 3rem;
       }
     }
   }
@@ -91,6 +93,9 @@
 
     @media screen and (max-width: 1500px) {
       padding: 1.25rem 4.15rem 1rem;
+    }
+    @media screen and (max-width: 1050px) {
+      padding: 1.25rem 2rem .5rem .25rem;
     }
   }
 

@@ -79,4 +79,20 @@ $cream: #f5eff3;
     }
   }
 
+  @media screen and (max-width: 675px) {
+    &--title {
+      font-size: 2.675rem;
+      padding-bottom: 1.45rem;
+    }
+
+    &--text,
+    &--item {
+      font-size: 1.6rem;
+    }
+
+    &--item {
+      padding: 0 .5rem 1.1rem;
+    }
+  }
+
 }

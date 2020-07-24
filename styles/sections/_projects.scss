@@ -1,6 +1,6 @@
 .projects {
   &--title {
-    @include pageTitle(0, 0, normal);
+    @include pageTitle(0, 10vw, normal);
   }
 
   &--list {
@@ -11,7 +11,7 @@
 
 .project {
   @include pageWrapper;
-  min-height: 80rem;
+  min-height: 100rem;
   margin-top: 10rem;
   padding: 3rem;
   display: grid;
