@@ -87,14 +87,14 @@
       ["application", "react with express.js"]
     ],
     "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
-    "siteLink": "https://campaign.sportexsafety.com/covid",
-    "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
+    "siteLink": "https://brown-sales.netlify.app",
+    "siteRepo": "https://github.com/19Sean96/brownsales/tree/stable",
     "role": ["lead developer", "junior designer"],
     "year": "2020",
     "media": {
-      "type": "image",
-      "src": ["/campaign-builder.jpg"],
-      "alt": "Campaign Builder Image"
+      "type": "video",
+      "src": ["./brownsales.webm", "./brownsales.mp4"],
+      "alt": "Brownsales Web App Video"
     }
   }
 ]
