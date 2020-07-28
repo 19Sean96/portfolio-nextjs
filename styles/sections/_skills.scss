@@ -46,11 +46,8 @@
 
   &__wrapper {
     @include pageWrapper;
-    padding: 3rem 4rem 2.75rem;
+    padding: 0;
     transform: translateX(0px);
 
-    @media screen and (max-width: 1500px) {
-      padding: 0 ;
-    }
   }
 }

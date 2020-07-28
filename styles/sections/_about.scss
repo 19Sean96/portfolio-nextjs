@@ -89,11 +89,8 @@
   &__wrapper {
     @include pageWrapper;
 
-    padding: 3rem 4.75rem 2.75rem;
+    padding: 1.25rem 4.15rem 1rem;
 
-    @media screen and (max-width: 1500px) {
-      padding: 1.25rem 4.15rem 1rem;
-    }
     @media screen and (max-width: 1050px) {
       padding: 1.25rem 2rem .5rem .25rem;
     }

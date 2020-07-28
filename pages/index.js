@@ -9,7 +9,7 @@ import StyledLanding from "../components/Landing.styled";
 
 export default function Home(props) {
   const [ref, inView, entry] = useInView({
-    threshold: 0.415,
+    threshold: 0.3,
   });
 
   return (

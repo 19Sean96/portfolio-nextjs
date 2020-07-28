@@ -4,12 +4,17 @@ import StyledProject from "./Project.styled";
 import { useInView } from "react-intersection-observer";
 
 const Image = (props) => (
-  <img
-    src="/campaign-builder.jpg"
-    alt="Campaign Builder"
-    className="project--img"
-  />
+  <img src={props.src} alt={props.alt} className="project--img" />
 );
+
+const Video = (props) => {
+  return (
+    <video autoPlay="true" loop="true" muted="true" playsInline="true" className="project--vid">
+      <source src={props.webm} type="video/webm" />
+      <source src={props.mp4} type="video/mp4" />
+    </video>
+  );
+};
 
 export default function Project(props) {
   const { project } = props;
@@ -42,7 +47,11 @@ export default function Project(props) {
         </a>
       </nav>
       <article className="project--img__wrapper">
-        <Image />
+        {project.media.type === "image" ? (
+          <Image src={project.media.src[0]} alt={project.media.alt} />
+        ) : (
+          <Video webm={project.media.src[0]} mp4={project.media.src[1]}/>
+        )}
       </article>
       <article className="project--description">
         <h3 className="project--description__title">Description</h3>

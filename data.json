@@ -11,21 +11,12 @@
     "siteLink": "https://campaign.sportexsafety.com/covid",
     "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
     "role": ["lead developer", "junior designer"],
-    "year": "2020"
-  },
-  {
-    "title": "Chaptr",
-    "subtitle": "e-Commerce Marketing Template",
-    "technologyUsed": [
-      ["hosting", "(2x) Ubuntu 18.04 Servers With Pm2"],
-      ["database", "sql with headless CMS (Directus) & Terminal access"],
-      ["application", "react with express.js"]
-    ],
-    "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
-    "siteLink": "https://campaign.sportexsafety.com/covid",
-    "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
-    "role": ["lead developer", "junior designer"],
-    "year": "2020"
+    "year": "2020",
+    "media": {
+      "type": "video",
+      "src": ["./campaign-builder.webm", "./campaign-builder.mp4"],
+      "alt": "Campaign Builder App Video"
+    }
   },
   {
     "title": "Picki",
@@ -33,13 +24,21 @@
     "technologyUsed": [
       ["hosting", "Heroku w/ SQL plugin"],
       ["database", "MYSQL for saving API data"],
-      ["application", "Express.js with handlebars for templating (pre-React). Yelp API for data collection."]
+      [
+        "application",
+        "Express.js with handlebars for templating (pre-React). Yelp API for data collection."
+      ]
     ],
     "description": "A restaurant locator & review platform which allows users to add emojis to symbolize reviews. This application utilizes the Yelp API to retrieve the information. This was a school project where I utilized touch-controls for mobile (AKA swiping between restaurants.",
     "siteLink": "https://picki-food.herokuapp.com/",
     "siteRepo": "https://github.com/19Sean96/Project-2",
     "role": ["junior developer"],
-    "year": "2019"
+    "year": "2019",
+    "media": {
+      "type": "video",
+      "src": ["./picki.webm", "./picki.mp4"],
+      "alt": "Picki Web App Video"
+    }
   },
   {
     "title": "GIF Search",
@@ -53,7 +52,12 @@
     "siteLink": "https://19sean96.github.io/gif-generator-MAX/",
     "siteRepo": "https://github.com/19Sean96/gif-generator-MAX",
     "role": ["junior developer"],
-    "year": "2019"
+    "year": "2019",
+    "media": {
+      "type": "video",
+      "src": ["./giphy.webm", "./giphy.mp4"],
+      "alt": "GIF Search Web App Video"
+    }
   },
   {
     "title": "Reactive Shapes",
@@ -64,10 +68,15 @@
       ["application", "react, scss, svg/polygon animation"]
     ],
     "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
-    "siteLink": "https://campaign.sportexsafety.com/covid",
-    "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
-    "role": ["lead developer", "junior designer"],
-    "year": "2020"
+    "siteLink": "https://reactiveshapes.netlify.app",
+    "siteRepo": "https://github.com/19Sean96/memoryGame",
+    "role": ["junior developer"],
+    "year": "2019",
+    "media": {
+      "type": "video",
+      "src": ["./reactive-shapes.webm", "./reactive-shapes.mp4"],
+      "alt": "Reactive Shapes Web App Video"
+    }
   },
   {
     "title": "Brown Sales",
@@ -81,6 +90,11 @@
     "siteLink": "https://campaign.sportexsafety.com/covid",
     "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
     "role": ["lead developer", "junior designer"],
-    "year": "2020"
+    "year": "2020",
+    "media": {
+      "type": "image",
+      "src": ["/campaign-builder.jpg"],
+      "alt": "Campaign Builder Image"
+    }
   }
 ]

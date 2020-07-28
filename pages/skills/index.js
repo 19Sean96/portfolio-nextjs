@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 export default function SkillsPage() {
   const [ref, inView, entry] = useInView({
-    threshold: 0.415,
+    threshold: 0.3,
   });
 
   // SCROLLING DOWN FROM ABOUT TRIGGERS /SKILLS. ONCE /ABOUT GOES OUT OF VIEW, IT RESETS BACK TO /
