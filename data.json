@@ -29,39 +29,39 @@
   },
   {
     "title": "Picki",
-    "subtitle": "e-Commerce Marketing Template",
+    "subtitle": "Restaurant Locator",
     "technologyUsed": [
-      ["hosting", "(2x) Ubuntu 18.04 Servers With Pm2"],
-      ["database", "sql with headless CMS (Directus) & Terminal access"],
-      ["application", "react with express.js"]
+      ["hosting", "Heroku w/ SQL plugin"],
+      ["database", "MYSQL for saving API data"],
+      ["application", "Express.js with handlebars for templating (pre-React). Yelp API for data collection."]
     ],
-    "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
-    "siteLink": "https://campaign.sportexsafety.com/covid",
-    "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
-    "role": ["lead developer", "junior designer"],
-    "year": "2020"
+    "description": "A restaurant locator & review platform which allows users to add emojis to symbolize reviews. This application utilizes the Yelp API to retrieve the information. This was a school project where I utilized touch-controls for mobile (AKA swiping between restaurants.",
+    "siteLink": "https://picki-food.herokuapp.com/",
+    "siteRepo": "https://github.com/19Sean96/Project-2",
+    "role": ["junior developer"],
+    "year": "2019"
   },
   {
     "title": "GIF Search",
-    "subtitle": "e-Commerce Marketing Template",
+    "subtitle": "Giphy API Engine",
     "technologyUsed": [
-      ["hosting", "(2x) Ubuntu 18.04 Servers With Pm2"],
-      ["database", "sql with headless CMS (Directus) & Terminal access"],
-      ["application", "react with express.js"]
+      ["hosting", "Github Pages"],
+      ["database", "N/A"],
+      ["application", "SCSS, jQuery, vanilla HTML"]
     ],
-    "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
-    "siteLink": "https://campaign.sportexsafety.com/covid",
-    "siteRepo": "https://github.com/19Sean96/express-react-campaign-template",
-    "role": ["lead developer", "junior designer"],
-    "year": "2020"
+    "description": "A complete front-end application, this was my first project utilizing axios to manage APIs. I experimented with the giphy queries to allow the user to change the gif rating (G-R) & the quantity of gifs to return. ",
+    "siteLink": "https://19sean96.github.io/gif-generator-MAX/",
+    "siteRepo": "https://github.com/19Sean96/gif-generator-MAX",
+    "role": ["junior developer"],
+    "year": "2019"
   },
   {
     "title": "Reactive Shapes",
-    "subtitle": "e-Commerce Marketing Template",
+    "subtitle": "Animated Memory Game",
     "technologyUsed": [
-      ["hosting", "(2x) Ubuntu 18.04 Servers With Pm2"],
-      ["database", "sql with headless CMS (Directus) & Terminal access"],
-      ["application", "react with express.js"]
+      ["hosting", "Netlify"],
+      ["database", "N/A"],
+      ["application", "react, scss, svg/polygon animation"]
     ],
     "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
     "siteLink": "https://campaign.sportexsafety.com/covid",
