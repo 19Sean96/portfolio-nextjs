@@ -1,4 +1,5 @@
 .projects {
+  opacity: 0;
   &--title {
     @include pageTitle(0, 10vw, normal);
   }

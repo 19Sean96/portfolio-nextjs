@@ -1,4 +1,5 @@
 .about {
+  opacity: 0;
   &--title {
     @include pageTitle(-12.5rem, 12.5rem);
   }
