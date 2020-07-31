@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Logo from "./Logo";
 import Link from "next/link";
-import { StyledLink } from "./HomeLayout.styled";
+import { StyledLink } from "./StyledComponents";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -38,6 +38,7 @@ export default function MainLayout({ children }) {
     about: false,
     skills: false,
     projects: false,
+    contact: false
   });
 
   useEffect(() => {
@@ -47,19 +48,29 @@ export default function MainLayout({ children }) {
         about: true,
         skills: false,
         projects: false,
+        contact: false
       });
     } else if (router.asPath === "/skills") {
       setSectionActive({
         about: false,
         skills: true,
         projects: false,
+        contact: false
       });
     } else if (router.asPath === "/projects") {
       setSectionActive({
         about: false,
         skills: false,
         projects: true,
+        contact: false
       });
+    } else if (router.asPath === "/contact") {
+      setSectionActive({
+        about: false,
+        skills: false,
+        projects: false,
+        contact: true
+      })
     }
   }, [router.asPath]);
 
@@ -76,6 +87,7 @@ export default function MainLayout({ children }) {
       <div className="menu--toggle">
         <Link href="#about">
           <StyledLink
+            className="menu--item"
             onMouseOver={handleMouseIn}
             onMouseOut={handleMouseOut}
             active={sectionActive.about}
@@ -85,6 +97,7 @@ export default function MainLayout({ children }) {
         </Link>
         <Link href="#skills">
           <StyledLink
+            className="menu--item"
             onMouseOver={handleMouseIn}
             onMouseOut={handleMouseOut}
             active={sectionActive.skills}
@@ -94,11 +107,22 @@ export default function MainLayout({ children }) {
         </Link>
         <Link href="#projects">
           <StyledLink
+            className="menu--item"
             onMouseOver={handleMouseIn}
             onMouseOut={handleMouseOut}
             active={sectionActive.projects}
           >
             projects
+          </StyledLink>
+        </Link>
+        <Link href="#contact">
+          <StyledLink
+            className="menu--item"
+            onMouseOver={handleMouseIn}
+            onMouseOut={handleMouseOut}
+            active={sectionActive.contact}
+          >
+            contact
           </StyledLink>
         </Link>
       </div>

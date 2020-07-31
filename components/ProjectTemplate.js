@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import StyledProject from "./Project.styled";
+import { StyledProject } from "./StyledComponents";
 import { useInView } from "react-intersection-observer";
 
 const Image = (props) => (
