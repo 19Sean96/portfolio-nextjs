@@ -9,7 +9,7 @@ const Image = (props) => (
 
 const Video = (props) => {
   return (
-    <video autoPlay="true" loop="true" muted="true" playsInline="true" className="project--vid">
+    <video autoPlay={true} loop={true} muted={true} playsInline={true} className="project--vid">
       <source src={props.webm} type="video/webm" />
       <source src={props.mp4} type="video/mp4" />
     </video>
@@ -23,7 +23,7 @@ export default function Project(props) {
   });
 
   return (
-    <StyledProject className="project" inView={inView} ref={ref}>
+    <StyledProject className="project" inView={inView} ref={ref} key={props.index}>
       <div className="project--header">
         <h1 className="project--title">{project.title}</h1>
         <h2 className="project--subtitle">{project.subtitle}</h2>
@@ -61,9 +61,9 @@ export default function Project(props) {
         <div className="project--tech">
           <h3 className="project--tech__title">tech</h3>
           <ul className="project--tech__list">
-            {project.technologyUsed.map((techItem) => {
+            {project.technologyUsed.map((techItem, i) => {
               return (
-                <li className="project--tech__list--item">
+                <li className="project--tech__list--item" key={i}>
                   <p>{techItem[0]}</p>
                   <p>{techItem[1]}</p>
                 </li>
@@ -72,9 +72,9 @@ export default function Project(props) {
           </ul>
         </div>
         <div className="project--role">
-          <h3 className="project--role__title">roles</h3>
-          {project.role.map((role) => (
-            <p>{role}</p>
+          <h3 className="project--role__title">roles</h3 >
+          {project.role.map((role, i) => (
+            <p key={i}>{role}</p>
           ))}
         </div>
       </article>

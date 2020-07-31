@@ -24,14 +24,14 @@ export default function AboutPage() {
         <div className="about--paragraph__wrapper">
           <StyledArticle inView={inView} delay={.1} translate={"(0,-25%)"} className="about--paragraph about--paragraph-1">
             <h4 className="about--paragraph--title">Process</h4>
-            <p class="about--paragraph--text">
+            <p className="about--paragraph--text">
               Understanding & visualizing what is important - this is the first
               step that both Design & Development fundamentally share. With
               endless opportunity for creating experiences on the web, a
               targeted vision is needed to avoid wasting time and focus on the
               most impactful factors to the application end-goal.
             </p>
-            <p class="about--paragraph--text">
+            <p className="about--paragraph--text">
               To me, being able to visualize an application architecture and
               understand its impact on future development is indistinguishable
               to visualizing a design language for a web-app or website and

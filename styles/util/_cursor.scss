@@ -6,12 +6,14 @@
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: #111;  transform: translate(-50%, -50%) scale(1);
+  // background-color: #111;  
+  transform: translate(-50%, -50%) scale(1);
   pointer-events: none;
   left: 0;
   top: 0;
   transition: background-color 0.2s ease-in-out;
   mix-blend-mode: multiply;
+  background-image: url(/svg/blob.svg);
 
   &--inner {
       z-index: -1;
@@ -27,13 +29,6 @@
       mix-blend-mode: difference;
   }
 
-  &__alt {
-      background-color: $cream;
-      border: 1px solid #111;
-      width: 22.5px;
-      height: 22.5px;
-      display: none;
-  }
 }
 
 .cursor-2 {
@@ -53,16 +48,3 @@
 
 }
 
-.cursor-3 {
-    left: 0;
-    top: 0;
-    position: fixed;
-    z-index: 0;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    height: 5px;
-    width: 5px;
-    background-color: rgb(21, 4, 85);
-    // mix-blend-mode: color-dodge;
-    display: none;
-  }

@@ -32,8 +32,8 @@ export default function Projects() {
         <h3 className="projects--title">projects.</h3>
 
         <div className="projects--list">
-          {data.map((proj) => (
-            <Project project={proj} />
+          {data.map((proj, i) => (
+            <Project project={proj} index={i}/>
           ))}
         </div>
       </div>

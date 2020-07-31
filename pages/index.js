@@ -45,7 +45,7 @@ export default function Home(props) {
 
 const handleMouseIn = (e) => {
   const cursor = document.querySelector(".cursor");
-  cursor.style.backgroundColor = "rgb(41, 170, 18)";
+  // cursor.style.backgroundColor = "rgb(41, 170, 18)";
 
   const cursorInner = cursor.querySelector(".cursor--inner");
   cursorInner.style.transform = "translate(-50%,-50%) scale(1)";
@@ -54,7 +54,7 @@ const handleMouseIn = (e) => {
 
 const handleMouseOut = (e) => {
   const cursor = document.querySelector(".cursor");
-  cursor.style.backgroundColor = "#111";
+  // cursor.style.backgroundColor = "#111";
 
   const cursorInner = cursor.querySelector(".cursor--inner");
   cursorInner.style.transform = "translate(-50%,-50%) scale(.2)";

@@ -7,20 +7,20 @@ import { useEffect, useState } from "react";
 
 const handleMouseIn = (e) => {
   const cursor = document.querySelector(".cursor");
-  cursor.style.backgroundColor = "rgb(255,255,255)";
+  // cursor.style.backgroundColor = "rgb(120,120,120)";
 
   const cursorInner = cursor.querySelector(".cursor--inner");
-  cursorInner.style.transform = "translate(-50%,-50%) scale(15)";
+  cursorInner.style.transform = "translate(-50%,-50%) scale(8)";
   cursorInner.style.backgroundColor = "#7bd";
   cursorInner.style.borderColor = "#7bd";
 
   const cursor2 = document.querySelector(".cursor-2");
-  cursor2.style.backgroundColor = "#ffe";
+  cursor2.style.backgroundColor = "rgba(25,70,55,.5)";
 };
 
 const handleMouseOut = (e) => {
   const cursor = document.querySelector(".cursor");
-  cursor.style.backgroundColor = "#111";
+  // cursor.style.backgroundColor = "#111";
 
   const cursorInner = cursor.querySelector(".cursor--inner");
   cursorInner.style.transform = "translate(-50%,-50%) scale(.2)";
@@ -73,19 +73,33 @@ export default function MainLayout({ children }) {
 
       <main className="content__WRAPPER">{children}</main>
 
-      <div
-        className="menu--toggle"
-        onMouseOver={handleMouseIn}
-        onMouseOut={handleMouseOut}
-      >
+      <div className="menu--toggle">
         <Link href="#about">
-          <StyledLink active={sectionActive.about}>about</StyledLink>
+          <StyledLink
+            onMouseOver={handleMouseIn}
+            onMouseOut={handleMouseOut}
+            active={sectionActive.about}
+          >
+            about
+          </StyledLink>
         </Link>
         <Link href="#skills">
-          <StyledLink active={sectionActive.skills}>skills</StyledLink>
+          <StyledLink
+            onMouseOver={handleMouseIn}
+            onMouseOut={handleMouseOut}
+            active={sectionActive.skills}
+          >
+            skills
+          </StyledLink>
         </Link>
         <Link href="#projects">
-          <StyledLink active={sectionActive.projects}>projects</StyledLink>
+          <StyledLink
+            onMouseOver={handleMouseIn}
+            onMouseOut={handleMouseOut}
+            active={sectionActive.projects}
+          >
+            projects
+          </StyledLink>
         </Link>
       </div>
     </div>
