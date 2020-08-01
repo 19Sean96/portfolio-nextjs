@@ -61,7 +61,7 @@ const NetlifyForm = (props) => {
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      // onSubmit={handleSubmit(onSubmit)}
       className="contact--form"
       method="POST"
       data-netlify="true"
