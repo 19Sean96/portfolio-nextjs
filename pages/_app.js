@@ -93,9 +93,6 @@ class MyApp extends App {
           <div className="cursor--inner"></div>
         </div>
         <div className="cursor-2" ref={this.cursorTrailing}></div>
-        {/* <div className="morph-container" ref={this.cursorMorphing}>
-          <MorphingSVG />
-        </div> */}
       </div>
     );
   }

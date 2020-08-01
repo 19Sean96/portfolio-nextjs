@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { StyledContactSection } from "../../components/StyledComponents";
+import { GithubSVG, LinkedInSVG } from "../../components/SvgIcons";
 import NumberFormat from "react-number-format";
 
 export default function Contact() {
@@ -36,6 +37,14 @@ export default function Contact() {
           <div className="contact--details__item contact--details__email">
             Me@Seananthony.io
           </div>
+          <div className="contact--details--social__wrapper">
+            <div className="contact--details--social__item">
+              <GithubSVG />
+            </div>
+            <div className="contact--details--social__item">
+              <LinkedInSVG />
+            </div>
+          </div>
         </div>
         <div className="contact--form__wrapper">
           <div className="contact--form--title">shoot me a message</div>
@@ -51,7 +60,13 @@ const NetlifyForm = (props) => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="contact--form">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="contact--form"
+      method="POST"
+      data-netlify="true"
+      action="/"
+    >
       <div className="contact--input__wrapper">
         <label htmlFor="name" className="contact--input__label">
           Name
@@ -94,7 +109,7 @@ const NetlifyForm = (props) => {
         )}
       </div>
       <div className="contact--input__wrapper">
-        <label htmlFor="email" className="contact--input__label">
+        <label htmlFor="message" className="contact--input__label">
           Message
         </label>
         <input
@@ -102,7 +117,7 @@ const NetlifyForm = (props) => {
           ref={register({ required: true })}
           className="contact--input"
         />
-        {errors.email && (
+        {errors.message && (
           <span className="contact--input__error">This field is required</span>
         )}
       </div>
