@@ -6,11 +6,12 @@
 @import "./sections/about";
 @import "./sections/skills";
 @import "./sections/projects";
+@import "./sections/contact";
 
 @import url("https://use.typekit.net/jbp2qlq.css");
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 html,
@@ -28,93 +29,97 @@ body {
 }
 
 .app {
-    max-width: 100vw;
-    min-height: 100vh;
-    overflow-x: hidden;
-    background-color: $cream;
-    padding-top: 5vh;
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: $cream;
+  padding-top: 5vh;
 }
 
 .container {
-    position: relative;
-    width: 100vw;
+  position: relative;
+  width: 100vw;
 }
 
 .page {
-    position: relative;
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(-5vw);
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-5vw);
 
-    @media screen and (max-width: 1050px) {
-        transform: translateX(-10vw);
-    }
-
+  @media screen and (max-width: 1050px) {
+    transform: translateX(-10vw);
+  }
 }
 
 .logo {
-    width: 20vw;
-    max-width: 25rem;
-    position: fixed;
-    top: 1.5rem;
-    left: 1.5rem;
-    z-index: 10000;
+  width: 20vw;
+  max-width: 25rem;
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 10000;
 }
 
-.menu--toggle {
+.menu {
+  &--item {
+      transform: scale(.925);
+      opacity: .2;
+  }
+  &--toggle {
     position: fixed;
     z-index: 4000;
     top: 50%;
     right: 40px;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     display: flex;
     flex-direction: column;
     text-align: right;
 
     a {
-        color: #111;
-        font-size: 2.75rem;
-        text-transform: uppercase;
-        margin: 2rem 0 2rem;
+      color: #111;
+      font-size: 2.75rem;
+      text-transform: uppercase;
+      margin: 2rem 0 2rem;
     }
 
     @media screen and (max-width: 1300px) {
-
-        a {
-            font-size: 2.35rem;
-            margin: 1rem 0 1rem;
-        }
+      a {
+        font-size: 2.35rem;
+        margin: 1rem 0 1rem;
+      }
     }
-
+  }
 }
 
 .morph-container {
-    width: 110px;
-    height: 110px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 6000;
-    overflow: visible;
-     pointer-events: none;
+  width: 110px;
+  height: 110px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6000;
+  overflow: visible;
+  pointer-events: none;
 }
 
 .feather {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  path {
     position: relative;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 5rem;
-    overflow: visible;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    path {
-        position: relative;
-        z-index: 5000;
-        fill: #382e32
-    }
+    z-index: 5000;
+    fill: #382e32;
+  }
 }

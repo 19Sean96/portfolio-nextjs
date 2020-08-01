@@ -1,28 +1,43 @@
-import { useInView } from 'react-intersection-observer'
-import { StyledArticle, StyledSection } from '../../components/About.styled'
+import { useInView } from "react-intersection-observer";
+import {
+  StyledAboutArticle as StyledArticle,
+  StyledAboutSection as StyledSection,
+} from "../../components/StyledComponents";
 import { useEffect } from "react";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 export default function AboutPage() {
   const [ref, inView, entry] = useInView({
-    threshold: .365
-  })
+    threshold: 0.365,
+  });
 
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
-    console.log(inView)
-    if (inView) router.push('/', '/about', { shallow: true })
-    else if (!inView && router.asPath !== "/about") router.push("/", router.asPath, { shallow: true})
-    else router.push('/', undefined, { shallow: true })
-  }, [inView])
+    console.log(inView);
+    if (inView) router.push("/", "/about", { shallow: true });
+    else if (!inView && router.asPath !== "/about")
+      router.push("/", router.asPath, { shallow: true });
+    else router.push("/", undefined, { shallow: true });
+  }, [inView]);
 
   return (
-    <StyledSection className="about page" inView={inView} ref={ref} id="about" name="about">
+    <StyledSection
+      className="about page"
+      inView={inView}
+      ref={ref}
+      id="about"
+      name="about"
+    >
       <div className="about__wrapper">
         <h3 className="about--title">about.</h3>
         <div className="about--paragraph__wrapper">
-          <StyledArticle inView={inView} delay={.1} translate={"(0,-25%)"} className="about--paragraph about--paragraph-1">
+          <StyledArticle
+            inView={inView}
+            delay={0.1}
+            translate={"(0,-25%)"}
+            className="about--paragraph about--paragraph-1"
+          >
             <h4 className="about--paragraph--title">Process</h4>
             <p className="about--paragraph--text">
               Understanding & visualizing what is important - this is the first
@@ -38,7 +53,12 @@ export default function AboutPage() {
               understand how the user experience will be impacted.
             </p>
           </StyledArticle>
-          <StyledArticle inView={inView} delay={.2} translate={"(-25%,0)"} className="about--paragraph about--paragraph-2">
+          <StyledArticle
+            inView={inView}
+            delay={0.2}
+            translate={"(-25%,0)"}
+            className="about--paragraph about--paragraph-2"
+          >
             <h4 className="about--paragraph--title">Purpose</h4>
             <p className="about--paragraph--text">
               With proven capabilities in mathematics & creative design, I see
@@ -54,7 +74,12 @@ export default function AboutPage() {
               transparency, cooperation & understanding audiences.
             </p>
           </StyledArticle>
-          <StyledArticle inView={inView} delay={.3} translate={"(25%,0)"} className="about--paragraph about--paragraph-3">
+          <StyledArticle
+            inView={inView}
+            delay={0.3}
+            translate={"(25%,0)"}
+            className="about--paragraph about--paragraph-3"
+          >
             <h4 className="about--paragraph--title">Passion</h4>
             <p className="about--paragraph--text">
               Original ideas are nothing more than a “mixing” of pre-existing

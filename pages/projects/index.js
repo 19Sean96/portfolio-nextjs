@@ -1,7 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { StyledSection } from "../../components/About.styled";
+import { StyledAboutSection as StyledSection } from "../../components/StyledComponents";
 import Project from "../../components/ProjectTemplate";
 
 import data from "../../data.json";

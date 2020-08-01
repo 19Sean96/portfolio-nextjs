@@ -5,11 +5,12 @@ import { useInView } from "react-intersection-observer";
 import About from "./about";
 import Skills from "./skills";
 import Projects from "./projects"
-import StyledLanding from "../components/Landing.styled";
+import Contact from "./contact"
+import { StyledLandingSection as StyledLanding} from "../components/StyledComponents";
 
 export default function Home(props) {
   const [ref, inView, entry] = useInView({
-    threshold: 0.3,
+    threshold: 0.5,
   });
 
   return (
@@ -22,7 +23,7 @@ export default function Home(props) {
             <h2>Digital Communicator</h2>
             <h2>Creative Developer</h2>
           </div>
-          <Link as="/contact" href="/contact">
+          <Link href="#contact">
             <div
               className="small-box"
               onMouseOver={handleMouseIn}
@@ -37,6 +38,7 @@ export default function Home(props) {
       <About />
       <Skills />
       <Projects />
+      <Contact />
     </div>
   );
 }
