@@ -66,6 +66,7 @@ const NetlifyForm = (props) => {
       method="POST"
       data-netlify="true"
       action="/success"
+      name="contact"
     >
       <input type="hidden" name="form-name" value="contact" />
       <div className="contact--input__wrapper">
