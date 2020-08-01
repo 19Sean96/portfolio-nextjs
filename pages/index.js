@@ -1,20 +1,28 @@
 import Link from "next/link";
 import Router from "next/router";
 import { useInView } from "react-intersection-observer";
-
+import { useState } from "react";
 import About from "./about";
 import Skills from "./skills";
-import Projects from "./projects"
-import Contact from "./contact"
-import { StyledLandingSection as StyledLanding} from "../components/StyledComponents";
+import Projects from "./projects";
+import Contact from "./contact";
+import { StyledLandingSection as StyledLanding } from "../components/StyledComponents";
 
 export default function Home(props) {
   const [ref, inView, entry] = useInView({
     threshold: 0.5,
   });
 
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   return (
     <div className="container">
+      {formSubmitted && (
+        <aside className="submitted">
+          your message has been submitted! <br></br>I'll be in touch shortly :)
+        </aside>
+      )}
+
       <StyledLanding className="landing page" ref={ref} inView={inView}>
         <h3 className="echo">Holla!</h3>
         <div className="landing--center-stage">
@@ -38,7 +46,7 @@ export default function Home(props) {
       <About />
       <Skills />
       <Projects />
-      <Contact />
+      <Contact setFormSubmitted={setFormSubmitted} formSubmitted={formSubmitted}/>
     </div>
   );
 }

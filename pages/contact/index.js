@@ -6,10 +6,12 @@ import { StyledContactSection } from "../../components/StyledComponents";
 import { GithubSVG, LinkedInSVG } from "../../components/SvgIcons";
 import NumberFormat from "react-number-format";
 
-export default function Contact() {
+export default function Contact(props) {
   const [ref, inView, entry] = useInView({
     threshold: 0.365,
   });
+
+
 
   const router = useRouter();
   useEffect(() => {
@@ -28,6 +30,7 @@ export default function Contact() {
       ref={ref}
       name="contact"
     >
+
       <div className="contact__wrapper">
         <div className="contact--title">Contact</div>
         <div className="contact--details">
@@ -48,7 +51,7 @@ export default function Contact() {
         </div>
         <div className="contact--form__wrapper">
           <div className="contact--form--title">shoot me a message</div>
-          <NetlifyForm />
+          <NetlifyForm setFormSubmitted={props.setFormSubmitted} />
         </div>
       </div>
     </StyledContactSection>
@@ -61,11 +64,14 @@ const NetlifyForm = (props) => {
 
   return (
     <form
-      // onSubmit={handleSubmit(onSubmit)}
+      onSubmit={(e) => {
+        e.preventDefault();
+        props.setFormSubmitted(true);
+      }}
       className="contact--form"
       method="POST"
       data-netlify="true"
-      action="/success"
+      action={"/"}
       name="contact"
     >
       <input type="hidden" name="form-name" value="contact" />
