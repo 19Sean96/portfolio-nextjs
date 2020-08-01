@@ -2,7 +2,7 @@ import { useInView } from "react-intersection-observer";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { StyledContactSection } from "../../components/StyledComponents"
+import { StyledContactSection } from "../../components/StyledComponents";
 import NumberFormat from "react-number-format";
 
 export default function Contact() {
@@ -30,11 +30,15 @@ export default function Contact() {
       <div className="contact__wrapper">
         <div className="contact--title">Contact</div>
         <div className="contact--details">
-            <div className="contact--details__item contact--details__phone">480.526.0704</div>
-            <div className="contact--details__item contact--details__email">Me@Seananthony.io</div>
+          <div className="contact--details__item contact--details__phone">
+            480.526.0704
+          </div>
+          <div className="contact--details__item contact--details__email">
+            Me@Seananthony.io
+          </div>
         </div>
         <div className="contact--form__wrapper">
-            <div className="contact--form--title">shoot me a message</div>
+          <div className="contact--form--title">shoot me a message</div>
           <NetlifyForm />
         </div>
       </div>
@@ -49,14 +53,22 @@ const NetlifyForm = (props) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="contact--form">
       <div className="contact--input__wrapper">
+        <label htmlFor="name" className="contact--input__label">
+          Name
+        </label>
         <input
           name="name"
           ref={register({ required: true })}
           className="contact--input"
         />
-        {errors.name && <span>This field is required</span>}
+        {errors.name && (
+          <span className="contact--input__error">This field is required</span>
+        )}
       </div>
       <div className="contact--input__wrapper">
+        <label htmlFor="number" className="contact--input__label">
+          Number
+        </label>
         <NumberFormat
           name="number"
           format="+1 (###) ###-####"
@@ -64,17 +76,39 @@ const NetlifyForm = (props) => {
           getInputRef={register({ required: true })}
           className="contact--input"
         />
-        {errors.number && <span>This field is required</span>}
+        {errors.number && (
+          <span className="contact--input__error">This field is required</span>
+        )}
       </div>{" "}
       <div className="contact--input__wrapper">
+        <label htmlFor="email" className="contact--input__label">
+          Email
+        </label>
         <input
           name="email"
           ref={register({ required: true })}
           className="contact--input"
         />
-        {errors.email && <span>This field is required</span>}
+        {errors.email && (
+          <span className="contact--input__error">This field is required</span>
+        )}
       </div>
-      <input type="submit" />
+      <div className="contact--input__wrapper">
+        <label htmlFor="email" className="contact--input__label">
+          Message
+        </label>
+        <input
+          name="message"
+          ref={register({ required: true })}
+          className="contact--input"
+        />
+        {errors.email && (
+          <span className="contact--input__error">This field is required</span>
+        )}
+      </div>
+      <div className="contact--submit__wrapper">
+        <input className="contact--submit" type="submit" />
+      </div>
     </form>
   );
 };
