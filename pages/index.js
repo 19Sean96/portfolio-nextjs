@@ -1,12 +1,23 @@
 import Link from "next/link";
 import Router from "next/router";
 import { useInView } from "react-intersection-observer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import About from "./about";
 import Skills from "./skills";
 import Projects from "./projects";
 import Contact from "./contact";
 import { StyledLandingSection as StyledLanding } from "../components/StyledComponents";
+
+function debounce(fn, ms) {
+  let timer
+  return _ => {
+    clearTimeout(timer)
+    timer = setTimeout(_ => {
+      timer = null
+      fn.apply(this, arguments)
+    }, ms)
+  }
+}
 
 export default function Home(props) {
   const [ref, inView, entry] = useInView({
@@ -14,6 +25,34 @@ export default function Home(props) {
   });
 
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [dimensions, setDimensions] = useState({
+    height: null,
+    width: null
+  })
+
+  useEffect(() => {
+    setDimensions({
+      height: window.innerHeight,
+      width: window.innerWidth
+    })
+  }, [])
+
+  useEffect(() => {
+    const handleResize = debounce(() => {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+
+      console.log(dimensions.height)
+      console.log(dimensions.width)
+
+    }, 50)
+
+    window.addEventListener("resize", handleResize)
+
+    return _ => window.removeEventListener("resize", handleResize)
+  })
 
   return (
     <div className="container">

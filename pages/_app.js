@@ -1,4 +1,4 @@
-import React, { createRef } from "react";
+import React, { createRef, useState, useEffect } from "react";
 import App from "next/app";
 
 import HomeLayout from "../components/HomeLayout";
@@ -11,6 +11,7 @@ import {
   MorphingSVG,
 } from "../components/SvgIcons";
 
+
 class MyApp extends App {
   constructor(props) {
     super(props);
@@ -21,7 +22,8 @@ class MyApp extends App {
       trailingX: 0,
       trailingY: 0,
       morphX: 0,
-      morphY: 0
+      morphY: 0,
+      event: null
     };
 
     this.cursor = createRef();
@@ -30,6 +32,7 @@ class MyApp extends App {
     this.animationFrame = null;
   }
 
+
   componentDidMount() {
     document.addEventListener("mousemove", this.handleMouseMove);
     this.moveCursor();
@@ -37,6 +40,7 @@ class MyApp extends App {
 
   componentWillUnmount() {
     document.removeEventListener("mousemove", this.handleMouseMove);
+
     cancelAnimationFrame(this.animationFrame);
   }
 
@@ -49,6 +53,8 @@ class MyApp extends App {
     });
   };
 
+
+
   moveCursor = () => {
     const { mouseX, mouseY, trailingX, trailingY, morphX, morphY } = this.state;
     const diffX = mouseX - trailingX;
@@ -59,7 +65,7 @@ class MyApp extends App {
         trailingX: trailingX + diffX / 10,
         trailingY: trailingY + diffY / 10,
         morphX: trailingX + diffX / 2,
-        morphY: trailingY + diffY / 2
+        morphY: trailingY + diffY / 2,
       },
       () => {
         this.cursor.current.style.transform = `translate3d(
@@ -72,8 +78,8 @@ class MyApp extends App {
             calc(-50% + ${trailingY}px), 
             0)`;
         // this.cursorMorphing.current.style.transform = `translate3d(
-        //   calc(-50% + ${morphX}px), 
-        //   calc(-50% + ${morphY}px), 
+        //   calc(-50% + ${morphX}px),
+        //   calc(-50% + ${morphY}px),
         //   0) scale(15)`;
         this.animationFrame = requestAnimationFrame(this.moveCursor);
       }
@@ -82,9 +88,9 @@ class MyApp extends App {
   render() {
     // we retrieve coordinates from state
     const { Component, pageProps, router } = this.props;
+
     return (
       <div onMouseMove={(e) => this.handleMouseMove(e)} className="app">
-
         <HomeLayout>
           <Component {...pageProps} key={router.route} />
         </HomeLayout>
@@ -97,5 +103,7 @@ class MyApp extends App {
     );
   }
 }
+
+
 
 export default MyApp;
