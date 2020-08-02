@@ -24,7 +24,7 @@ $cream: #f5eff3;
   margin-bottom: 2rem;
   text-transform: uppercase;
   mix-blend-mode: $mode;
-
+  z-index: 200;
   @media screen and (max-width: 1500px) {
     font-size: 15rem;
   }

@@ -59,13 +59,48 @@
     font-style: normal;
     grid-column: 4/6;
     grid-row: 1/2;
-
+    justify-content: center;
     text-align: center;
     &__demo,
     &__docs {
+      position: relative;
       display: block;
       text-decoration: none;
       color: inherit;
+      margin: 2.1rem .5rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0%;
+        height: 2px;
+        background-color: #111;
+        transition: .46s width cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        width: 0%;
+        height: 2px;
+        background-color: #111;
+        transition: .46s width cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      &:hover {
+
+        &::before {
+          width: 25%;
+        }
+
+        &::after {
+          width: 25%;
+        }
+      }
     }
   }
 

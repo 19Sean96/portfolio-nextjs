@@ -28,6 +28,10 @@ body {
   cursor: none;
 }
 
+::selection {
+  background-color: crimson;
+}
+
 .app {
   max-width: 100vw;
   min-height: 100vh;
@@ -39,6 +43,10 @@ body {
 .container {
   position: relative;
   width: 100vw;
+}
+
+.app .container {
+  z-index: 500;
 }
 
 .page {
@@ -66,8 +74,21 @@ body {
 
 .menu {
   &--item {
-      transform: scale(.925);
-      opacity: .2;
+    transform: scale(0.925);
+    opacity: 0.2;
+    color: #111;
+    font-size: 2.75rem;
+    text-transform: uppercase;
+    margin: 2rem 0 2rem;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 1300px) {
+      font-size: 2.35rem;
+      margin: 1rem 0 1rem;
+    }
   }
   &--toggle {
     position: fixed;
@@ -78,20 +99,6 @@ body {
     display: flex;
     flex-direction: column;
     text-align: right;
-
-    a {
-      color: #111;
-      font-size: 2.75rem;
-      text-transform: uppercase;
-      margin: 2rem 0 2rem;
-    }
-
-    @media screen and (max-width: 1300px) {
-      a {
-        font-size: 2.35rem;
-        margin: 1rem 0 1rem;
-      }
-    }
   }
 }
 
@@ -121,5 +128,29 @@ body {
     position: relative;
     z-index: 5000;
     fill: #382e32;
+  }
+}
+
+.submitted {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  color: #4bb543;
+  background-color: $cream;
+  box-shadow: 0 -0.5rem 3rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 2.1rem;
+  padding: 0.8rem 10rem;
+  text-transform: capitalize;
+  opacity: 0;
+  animation: fadeIn 0.5s 1s ease-out forwards;
+  margin: 1rem;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }

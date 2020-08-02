@@ -9,11 +9,43 @@ const Image = (props) => (
 
 const Video = (props) => {
   return (
-    <video autoPlay={true} loop={true} muted={true} playsInline={true} className="project--vid">
+    <video
+      autoPlay={true}
+      loop={true}
+      muted={true}
+      playsInline={true}
+      className="project--vid"
+    >
       <source src={props.webm} type="video/webm" />
       <source src={props.mp4} type="video/mp4" />
     </video>
   );
+};
+
+const handleMouseIn = (e, bg) => {
+  const cursor = document.querySelector(".cursor");
+  cursor.style.backgroundColor = "rgb(120,120,120)";
+
+  const cursorInner = cursor.querySelector(".cursor--inner");
+  cursorInner.style.transform = "translate(-50%,-50%) scale(4.45)";
+  cursorInner.style.backgroundColor = bg;
+  cursorInner.style.borderColor = bg;
+
+  const cursor2 = document.querySelector(".cursor-2");
+  cursor2.style.backgroundColor = "rgba(25,70,55,.5)";
+};
+
+const handleMouseOut = (e) => {
+  const cursor = document.querySelector(".cursor");
+  cursor.style.backgroundColor = "#111";
+
+  const cursorInner = cursor.querySelector(".cursor--inner");
+  cursorInner.style.transform = "translate(-50%,-50%) scale(.2)";
+  cursorInner.style.backgroundColor = "rgba(255,255,255,0)";
+  cursorInner.style.borderColor = "#111";
+
+  const cursor2 = document.querySelector(".cursor-2");
+  cursor2.style.backgroundColor = "#111";
 };
 
 export default function Project(props) {
@@ -23,7 +55,12 @@ export default function Project(props) {
   });
 
   return (
-    <StyledProject className="project" inView={inView} ref={ref} key={props.index}>
+    <StyledProject
+      className="project"
+      inView={inView}
+      ref={ref}
+      key={props.index}
+    >
       <div className="project--header">
         <h1 className="project--title">{project.title}</h1>
         <h2 className="project--subtitle">{project.subtitle}</h2>
@@ -34,6 +71,8 @@ export default function Project(props) {
           className="project--nav__demo"
           href={project.siteLink}
           target="_blank"
+          onMouseOver={e => handleMouseIn(e, "#7bd")}
+          onMouseOut={handleMouseOut}
         >
           demo
         </a>
@@ -42,6 +81,8 @@ export default function Project(props) {
           className="project--nav__docs"
           href={project.siteRepo}
           target="_blank"
+          onMouseOver={e => handleMouseIn(e, "#7d7")}
+          onMouseOut={handleMouseOut}
         >
           docs
         </a>
@@ -50,7 +91,7 @@ export default function Project(props) {
         {project.media.type === "image" ? (
           <Image src={project.media.src[0]} alt={project.media.alt} />
         ) : (
-          <Video webm={project.media.src[0]} mp4={project.media.src[1]}/>
+          <Video webm={project.media.src[0]} mp4={project.media.src[1]} />
         )}
       </article>
       <article className="project--description">
@@ -72,7 +113,7 @@ export default function Project(props) {
           </ul>
         </div>
         <div className="project--role">
-          <h3 className="project--role__title">roles</h3 >
+          <h3 className="project--role__title">roles</h3>
           {project.role.map((role, i) => (
             <p key={i}>{role}</p>
           ))}

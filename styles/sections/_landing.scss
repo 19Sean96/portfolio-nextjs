@@ -4,13 +4,12 @@
 
   .echo {
     position: absolute;
-    z-index: 1;
+    z-index: 101;
     top: 0; left: 0;
     transform: translate(-7.5%, -10%);
     font-size: 27vmax;
     text-transform: uppercase;
     color: #ede5e6;
-
     @media screen and (max-width: 1500px) {
       transform: translate(-7.5%,-5%);
 

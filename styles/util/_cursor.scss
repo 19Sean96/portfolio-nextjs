@@ -6,13 +6,13 @@
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  // background-color: #111;  
+  background-color: #111;  
   transform: translate(-50%, -50%) scale(1);
   pointer-events: none;
   left: 0;
   top: 0;
   transition: background-color 0.2s ease-in-out;
-  mix-blend-mode: multiply;
+  mix-blend-mode: color-burn;
 
   &--inner {
       z-index: -1;
@@ -28,15 +28,36 @@
       mix-blend-mode: difference;
   }
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 2px #111 solid;
+    animation: pulseInOut 1s cubic-bezier(0.85, 0, 0.15, 1) infinite alternate;
+  }
+}
+
+@keyframes pulseInOut {
+  from {
+    transform:  translate(-50%, -50%) scale(1);
+  }
+
+  to {
+    transform:  translate(-50%, -50%) scale(1.35);
+  }
 }
 
 .cursor-2 {
   left: 0;
   top: 0;
   position: fixed;
-  z-index: 1000;
   transform: translate(-50%, -50%);
   pointer-events: none;
+  z-index: 100;
   width: 100px;
   height: 100px;
   border-radius: 50%;

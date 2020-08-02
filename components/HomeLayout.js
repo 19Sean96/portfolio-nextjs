@@ -5,14 +5,23 @@ import { StyledLink } from "./StyledComponents";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-const handleMouseIn = (e) => {
+// handleMouseIn Parameters
+/*
+(
+  event,
+  bgcolor
+)
+
+*/
+
+const handleMouseIn = (e, bg) => {
   const cursor = document.querySelector(".cursor");
-  // cursor.style.backgroundColor = "rgb(120,120,120)";
+  cursor.style.backgroundColor = "rgb(120,120,120)";
 
   const cursorInner = cursor.querySelector(".cursor--inner");
-  cursorInner.style.transform = "translate(-50%,-50%) scale(8)";
-  cursorInner.style.backgroundColor = "#7bd";
-  cursorInner.style.borderColor = "#7bd";
+  cursorInner.style.transform = "translate(-50%,-50%) scale(4.45)";
+  cursorInner.style.backgroundColor = bg;
+  cursorInner.style.borderColor = bg;
 
   const cursor2 = document.querySelector(".cursor-2");
   cursor2.style.backgroundColor = "rgba(25,70,55,.5)";
@@ -20,7 +29,7 @@ const handleMouseIn = (e) => {
 
 const handleMouseOut = (e) => {
   const cursor = document.querySelector(".cursor");
-  // cursor.style.backgroundColor = "#111";
+  cursor.style.backgroundColor = "#111";
 
   const cursorInner = cursor.querySelector(".cursor--inner");
   cursorInner.style.transform = "translate(-50%,-50%) scale(.2)";
@@ -88,7 +97,7 @@ export default function MainLayout({ children }) {
         <Link href="#about">
           <StyledLink
             className="menu--item"
-            onMouseOver={handleMouseIn}
+            onMouseOver={e => handleMouseIn(e, "#7bd")}
             onMouseOut={handleMouseOut}
             active={sectionActive.about}
           >
@@ -98,7 +107,7 @@ export default function MainLayout({ children }) {
         <Link href="#skills">
           <StyledLink
             className="menu--item"
-            onMouseOver={handleMouseIn}
+            onMouseOver={e => handleMouseIn(e, "#f7fa53")}
             onMouseOut={handleMouseOut}
             active={sectionActive.skills}
           >
@@ -108,7 +117,7 @@ export default function MainLayout({ children }) {
         <Link href="#projects">
           <StyledLink
             className="menu--item"
-            onMouseOver={handleMouseIn}
+            onMouseOver={e => handleMouseIn(e, "#d77")}
             onMouseOut={handleMouseOut}
             active={sectionActive.projects}
           >
@@ -118,7 +127,7 @@ export default function MainLayout({ children }) {
         <Link href="#contact">
           <StyledLink
             className="menu--item"
-            onMouseOver={handleMouseIn}
+            onMouseOver={e => handleMouseIn(e, "#7d7")}
             onMouseOut={handleMouseOut}
             active={sectionActive.contact}
           >
