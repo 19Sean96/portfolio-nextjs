@@ -42,11 +42,9 @@
         }
 
         @media screen and (max-width: 1000px) {
-            flex-direction: row;
-            width: 100%;
+            width: 80%;
             max-width: unset;
-            justify-content: space-around;
-            align-items: center;
+
         }
     }
 

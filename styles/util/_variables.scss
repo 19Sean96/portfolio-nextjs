@@ -41,6 +41,9 @@ $cream: #f5eff3;
   @media screen and (max-width: 1000px) {
     font-size: 10rem;
   }
+  @media screen and (max-width:615px) {
+    font-size: 16vw;
+  }
 }
 
 @mixin pageBody() {
