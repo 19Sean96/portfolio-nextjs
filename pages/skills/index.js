@@ -1,23 +1,42 @@
 import { useInView } from "react-intersection-observer";
-import { StyledSection } from '../../components/Skills.styled'
-import { useEffect } from "react";
-import { useRouter } from 'next/router'
+import { StyledSection } from "../../components/Skills.styled";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
-export default function SkillsPage() {
+export default function SkillsPage(props) {
+  const { height, width } = props.dimensions;
+  const [threshold, setThreshold] = useState(0);
+
   const [ref, inView, entry] = useInView({
-    threshold: 0.3,
+    threshold: threshold,
   });
 
   // SCROLLING DOWN FROM ABOUT TRIGGERS /SKILLS. ONCE /ABOUT GOES OUT OF VIEW, IT RESETS BACK TO /
 
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
-    if (inView) router.push('/', '/skills', { shallow: true })
-    else if (!inView && router.asPath !== "/skills") router.push("/", router.asPath, { shallow: true})
-    else router.push('/', undefined, { shallow: true })
-  }, [inView])
+    if (inView) router.push("/", "/skills", { shallow: true });
+    else if (!inView && router.asPath !== "/skills")
+      router.push("/", router.asPath, { shallow: true });
+    else router.push("/", undefined, { shallow: true });
+  }, [inView]);
+
+  useEffect(() => {
+    let pageHeight = 0;
+    if (entry) pageHeight = entry.boundingClientRect.height;
+    setThreshold(
+      height < pageHeight / 2 ? 0.075 : height < pageHeight ? 0.15 : 0.3
+    );
+  }, [props.dimensions, entry]);
+
   return (
-    <StyledSection className="skills page" inView={inView} ref={ref} id="skills" name="skills">
+    <StyledSection
+      className="skills page"
+      inView={inView}
+      ref={ref}
+      id="skills"
+      name="skills"
+    >
       <div className="skills__wrapper">
         <h3 className="skills--title">skills.</h3>
         <div className="skills--list__wrapper">

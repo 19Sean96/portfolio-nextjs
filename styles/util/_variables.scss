@@ -13,6 +13,15 @@ $cream: #f5eff3;
     margin-bottom: 12rem;
     box-shadow: 0 0.83rem 1.3rem 0 rgba(0, 0, 0, 0.1);
 
+
+    @media screen and (max-width: 950px) {
+      max-width: 90vw;
+    }
+
+    @media screen and (max-width: 725px) {
+      max-width: 100vw;
+    }
+
 }
 
 @mixin pageTitle($top, $left, $mode: difference) {
@@ -27,6 +36,10 @@ $cream: #f5eff3;
   z-index: 200;
   @media screen and (max-width: 1500px) {
     font-size: 15rem;
+  }
+
+  @media screen and (max-width: 1000px) {
+    font-size: 10rem;
   }
 }
 
@@ -79,15 +92,30 @@ $cream: #f5eff3;
     }
   }
 
+  @media screen and (max-width: 1000px) {
+    &--title {
+      font-size: 2.65rem;
+    }
+
+    &--text,
+    &--item {
+      font-size: 1.55rem;
+    }
+
+    &--item {
+      padding: 0 1.1rem 1.3rem;
+    }
+  }
+
   @media screen and (max-width: 675px) {
     &--title {
-      font-size: 2.675rem;
+      font-size: 2.1rem;
       padding-bottom: 1.45rem;
     }
 
     &--text,
     &--item {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
     }
 
     &--item {

@@ -22,6 +22,10 @@ body {
   font-size: 10px;
 }
 
+body {
+  border: 1px solid transparent;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -52,24 +56,34 @@ body {
 .page {
   position: relative;
   width: 100vw;
-  min-height: 100vh;
+  // min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   transform: translateX(-5vw);
-
+  margin-bottom: 15rem;
   @media screen and (max-width: 1050px) {
     transform: translateX(-10vw);
+  }
+  @media screen and (max-width: 1000px) {
+    transform: translateX(0);
   }
 }
 
 .logo {
   width: 20vw;
+  min-width: 20rem;
   max-width: 25rem;
   position: fixed;
   top: 1.5rem;
   left: 1.5rem;
   z-index: 10000;
+
+  @media screen and (max-width: 950px) {
+    left: 50%;
+    top: 3.5rem;
+    transform: translateX(-50%);
+  }
 }
 
 .menu {
@@ -99,6 +113,44 @@ body {
     display: flex;
     flex-direction: column;
     text-align: right;
+  }
+
+  @media screen and (max-width: 1000px) {
+
+    &--item {
+      margin: 0rem 2rem 0rem;
+    }
+    
+    &--toggle {
+      top: 1.5rem;
+      right: 50%;
+      flex-direction: row;
+      transform: translate(75%,0);
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+
+
+    &--toggle {
+      top: 5rem;
+      right: 50%;
+      transform: translate(50%, 100%);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+
+    &--item {
+      width: 35%;
+      text-align: center;
+    }
+    &--toggle {
+      transform: translate(50%, 100%) scale(.85);
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
   }
 }
 

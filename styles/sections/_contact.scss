@@ -1,7 +1,10 @@
 .contact {
-
     &--title {
         @include pageTitle(-10rem, 10rem);
+
+        @media screen and (max-width: 1000px) {
+            @include pageTitle(-10rem, 0)
+        }
     }
 
     &--details {
@@ -31,6 +34,20 @@
                 margin-top: 2rem;
             }
         }
+
+        @media screen and (max-width: 1200px) {
+            align-self: center;
+            text-align: center;
+            margin: 2rem;
+        }
+
+        @media screen and (max-width: 1000px) {
+            flex-direction: row;
+            width: 100%;
+            max-width: unset;
+            justify-content: space-around;
+            align-items: center;
+        }
     }
 
     &--form {
@@ -51,6 +68,20 @@
             padding: 5rem;
             width: 70%;
             max-width: 1150px;
+        }
+
+        @media screen and (max-width: 1200px) {
+
+            &__wrapper {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+
+            &__wrapper {
+                width: 100%;
+            }
         }
     }
 
@@ -118,7 +149,6 @@
 
     &__wrapper {
         @include pageWrapper;
-        // padding: 200px 0 0 0;
         transform: translateX(0px);
         width: 70%;
         max-width: 1600px;
@@ -127,6 +157,12 @@
         flex-direction: row-reverse;
         box-shadow: none !important;
         padding-top: 17.5vw;
+
+        @media screen and (max-width: 1200px) {
+            flex-direction: column;
+            width: 80%;
+            padding-top: 12rem;
+        }
         
     }
     padding-bottom: 25rem;

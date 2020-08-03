@@ -30,14 +30,23 @@ export default function Home(props) {
     width: null
   })
 
+  const [threshold, setThreshold] = useState(.5)
+
   useEffect(() => {
+    console.log("The entry", entry)
     setDimensions({
       height: window.innerHeight,
       width: window.innerWidth
     })
+
+    // setThreshold(() => {
+      
+    // })
   }, [])
 
   useEffect(() => {
+
+
     const handleResize = debounce(() => {
       setDimensions({
         height: window.innerHeight,
@@ -82,10 +91,10 @@ export default function Home(props) {
           </Link>
         </div>
       </StyledLanding>
-      <About />
-      <Skills />
-      <Projects />
-      <Contact setFormSubmitted={setFormSubmitted} formSubmitted={formSubmitted}/>
+      <About dimensions={dimensions}/>
+      <Skills dimensions={dimensions}/>
+      <Projects dimensions={dimensions}/>
+      <Contact setFormSubmitted={setFormSubmitted} formSubmitted={formSubmitted} dimensions={dimensions}/>
     </div>
   );
 }

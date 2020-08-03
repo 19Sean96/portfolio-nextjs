@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { StyledProject } from "./StyledComponents";
 import { useInView } from "react-intersection-observer";
-
+import { useEffect, useState } from "react";
 const Image = (props) => (
   <img src={props.src} alt={props.alt} className="project--img" />
 );
@@ -50,9 +50,22 @@ const handleMouseOut = (e) => {
 
 export default function Project(props) {
   const { project } = props;
+  const { height, width } = props.dimensions;
+  const [threshold, setThreshold] = useState(0);
+
   const [ref, inView, entry] = useInView({
-    threshold: 0.43,
+    threshold: threshold,
   });
+
+  useEffect(() => {
+    let pageHeight = 0;
+
+    if (entry) pageHeight = entry.boundingClientRect.height;
+
+    setThreshold(
+      height < pageHeight / 2 ? 0.125 : height < pageHeight ? 0.2 : 0.4
+    );
+  }, [props.dimensions, entry]);
 
   return (
     <StyledProject

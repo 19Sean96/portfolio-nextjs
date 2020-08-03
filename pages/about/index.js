@@ -3,12 +3,15 @@ import {
   StyledAboutArticle as StyledArticle,
   StyledAboutSection as StyledSection,
 } from "../../components/StyledComponents";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-export default function AboutPage() {
+export default function AboutPage(props) {
+  const { height, width } = props.dimensions;
+  const [threshold, setThreshold] = useState(0);
+
   const [ref, inView, entry] = useInView({
-    threshold: 0.365,
+    threshold: threshold,
   });
 
   const router = useRouter();
@@ -20,6 +23,15 @@ export default function AboutPage() {
       router.push("/", router.asPath, { shallow: true });
     else router.push("/", undefined, { shallow: true });
   }, [inView]);
+
+  useEffect(() => {
+    let pageHeight = 0;
+
+    if (entry) pageHeight = entry.boundingClientRect.height;
+    setThreshold(
+      height < pageHeight / 2 ? 0.125 : height < pageHeight ? 0.2 : 0.4
+    );
+  }, [props.dimensions, entry]);
 
   return (
     <StyledSection
