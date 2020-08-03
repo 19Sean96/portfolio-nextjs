@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { useForm } from "react-hook-form";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { StyledContactSection } from "../../components/StyledComponents";
 import { GithubSVG, LinkedInSVG } from "../../components/SvgIcons";
