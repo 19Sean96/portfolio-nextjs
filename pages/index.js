@@ -26,8 +26,8 @@ export default function Home(props) {
 
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [dimensions, setDimensions] = useState({
-    height: null,
-    width: null
+    height: 0,
+    width: 0
   })
 
   const [threshold, setThreshold] = useState(.5)

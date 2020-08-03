@@ -6,8 +6,13 @@ import {
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
+const defaultDimensions = {
+  height: 720,
+  width: 1080
+}
+
 export default function AboutPage(props) {
-  const { height, width } = props.dimensions;
+  const { height, width } = props.dimensions || defaultDimensions;
   const [threshold, setThreshold] = useState(0);
 
   const [ref, inView, entry] = useInView({

@@ -6,11 +6,16 @@ import Project from "../../components/ProjectTemplate";
 
 import data from "../../data.json";
 
+const defaultDimensions = {
+  height: 720,
+  width: 1080
+}
+
 export default function Projects(props) {
-  const { height, width } = props.dimensions;
+  const { height, width } = props.dimensions || defaultDimensions;
   const [threshold, setThreshold] = useState(0);
   const [ref, inView, entry] = useInView({
-    threshold: threshold,
+    threshold: threshold || 0,
   });
 
   const router = useRouter();
