@@ -81,6 +81,12 @@
         }
       }
     }
+
+    @media screen and (max-width: 500px) {
+      .big-box {
+        height: 400px;
+      }
+    }
   }
 
   @media screen and (max-width:1500px) {

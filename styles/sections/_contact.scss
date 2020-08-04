@@ -109,6 +109,10 @@
                 height: .2rem;
                 background-color: #001;
             }
+
+            @media screen and (max-width: 1000px) {
+                max-width: 85%;
+            }
         }
 
         &__label {
@@ -164,4 +168,6 @@
         
     }
     padding-bottom: 25rem;
+
+
 }
