@@ -6,13 +6,21 @@ import { StyledContactSection } from "../../components/StyledComponents";
 import { GithubSVG, LinkedInSVG } from "../../components/SvgIcons";
 import NumberFormat from "react-number-format";
 
+const defaultDimensions = {
+  height: 720,
+  width: 1080
+}
+
 export default function Contact(props) {
+  const { height, width } = props.dimensions || defaultDimensions;
+  const [threshold, setThreshold] = useState(0);
+
   const [ref, inView, entry] = useInView({
-    threshold: 0.365,
+    threshold: threshold,
   });
 
-
   const router = useRouter();
+
   useEffect(() => {
     console.log(inView);
     if (inView) router.push("/", "/contact", { shallow: true });
@@ -20,6 +28,15 @@ export default function Contact(props) {
       router.push("/", router.asPath, { shallow: true });
     else router.push("/", undefined, { shallow: true });
   }, [inView]);
+
+  useEffect(() => {
+    let pageHeight = 0;
+
+    if (entry) pageHeight = entry.boundingClientRect.height;
+    setThreshold(
+      height < pageHeight / 2 ? 0.09 : height < pageHeight ? 0.18 : 0.36
+    );
+  }, [props.dimensions, entry]);
 
   return (
     <StyledContactSection
