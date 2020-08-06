@@ -72,7 +72,7 @@ export default function Home(props) {
       )}
 
       <StyledLanding className="landing page" ref={ref} inView={inView}>
-        <h3 className="echo">Holla!</h3>
+        <h3 className="echo">Hola!</h3>
         <div className="landing--center-stage">
           <div className="big-box">
             <h1 onClick={pushLink}>Hey.</h1>
