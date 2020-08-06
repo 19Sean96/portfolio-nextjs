@@ -2,14 +2,41 @@ import { useInView } from "react-intersection-observer";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import { StyledContactSection } from "../../components/StyledComponents";
 import { GithubSVG, LinkedInSVG } from "../../components/SvgIcons";
 import NumberFormat from "react-number-format";
 
 const defaultDimensions = {
   height: 720,
-  width: 1080
-}
+  width: 1080,
+};
+
+const handleMouseIn = (e, bg) => {
+  const cursor = document.querySelector(".cursor");
+  cursor.style.backgroundColor = "rgb(120,120,120)";
+
+  const cursorInner = cursor.querySelector(".cursor--inner");
+  cursorInner.style.transform = "translate(-50%,-50%) scale(4.45)";
+  cursorInner.style.backgroundColor = bg;
+  cursorInner.style.borderColor = bg;
+
+  const cursor2 = document.querySelector(".cursor-2");
+  cursor2.style.backgroundColor = "rgba(25,70,55,.5)";
+};
+
+const handleMouseOut = (e) => {
+  const cursor = document.querySelector(".cursor");
+  cursor.style.backgroundColor = "#111";
+
+  const cursorInner = cursor.querySelector(".cursor--inner");
+  cursorInner.style.transform = "translate(-50%,-50%) scale(.2)";
+  cursorInner.style.backgroundColor = "rgba(255,255,255,0)";
+  cursorInner.style.borderColor = "#111";
+
+  const cursor2 = document.querySelector(".cursor-2");
+  cursor2.style.backgroundColor = "#111";
+};
 
 export default function Contact(props) {
   const { height, width } = props.dimensions || defaultDimensions;
@@ -46,7 +73,6 @@ export default function Contact(props) {
       ref={ref}
       name="contact"
     >
-
       <div className="contact__wrapper">
         <div className="contact--title">Contact</div>
         <div className="contact--details">
@@ -58,10 +84,24 @@ export default function Contact(props) {
           </div>
           <div className="contact--details--social__wrapper">
             <div className="contact--details--social__item">
-              <GithubSVG />
+              <a
+                href="https://github.com/19Sean96"
+                target="_blank"
+                onMouseOver={(e) => handleMouseIn(e, "#d77")}
+                onMouseOut={handleMouseOut}
+              >
+                <GithubSVG />
+              </a>
             </div>
             <div className="contact--details--social__item">
-              <LinkedInSVG />
+              <a
+                href="https://www.linkedin.com/in/sean-a-alexander/"
+                target="_blank"
+                onMouseOver={(e) => handleMouseIn(e, "#7d7")}
+                onMouseOut={handleMouseOut}
+              >
+                <LinkedInSVG />
+              </a>
             </div>
           </div>
         </div>
