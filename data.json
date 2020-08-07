@@ -67,7 +67,7 @@
       ["database", "N/A"],
       ["application", "react, scss, svg/polygon animation"]
     ],
-    "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
+    "description": "A simple memory game involving randomized colors & shapes. If the user clicks the same shape they have already clicked, the game is over. This game is built on React, and involves SVG animation to provide a seamless, fast responsive animation.",
     "siteLink": "https://reactiveshapes.netlify.app",
     "siteRepo": "https://github.com/19Sean96/memoryGame",
     "role": ["junior developer"],
@@ -86,7 +86,7 @@
       ["database", "sql with headless CMS (Directus) & Terminal access"],
       ["application", "react with express.js"]
     ],
-    "description": "A dynamic campaign template for marketing products built using React & Express & Directus to manage the database and host the API. A 2-part application, this template allows the creation of multiple campaigns which become referenced at domain.com/<CAMPAIGN>. The campaign creator can add products of multiple categories, branding media & even add a theme color.",
+    "description": "Brown Sales, the client for this project, wanted a website where clients can view clearance products before heading to the store to order. Since the client wanted to have a CMS where they could add/remove products as they saw fit, Contentful was an excellent headless option for them. ",
     "siteLink": "https://brown-sales.netlify.app",
     "siteRepo": "https://github.com/19Sean96/brownsales/tree/stable",
     "role": ["lead developer", "junior designer"],
